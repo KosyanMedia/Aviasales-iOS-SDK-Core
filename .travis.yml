@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode7.2
+xcode_project: Project.xcodeproj
+xcode_scheme: Project
+xcode_sdk: 
+    - iphonesimulator

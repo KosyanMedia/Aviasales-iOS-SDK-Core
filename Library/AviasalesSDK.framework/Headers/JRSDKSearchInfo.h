@@ -14,7 +14,7 @@ typedef NS_ENUM (NSInteger, JRSDKTravelClass) {
 @property (nonatomic, assign) NSInteger children;
 @property (nonatomic, assign) NSInteger infants;
 
-@property (nonatomic, retain) NSSet <id <JRSDKTravelSegment>> *unorderedTravelSegments;
+@property (nonatomic, retain) NSOrderedSet <id <JRSDKTravelSegment>> *travelSegments;
 
 @property (nonatomic, retain) NSSet <id <JRSDKTicket>> *searchTickets;
 @property (nonatomic, retain) NSSet <id <JRSDKTicket>> *strictSearchTickets;

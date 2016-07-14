@@ -142,8 +142,8 @@ After appropriate method call you will receive ```AviasalesSDKAdsView``` with ad
 ## ⚒ Other Utils by SDK
 Name | How to retrieve object | Description
 -----|-----------------------|------------
-Airports storage|```[AviasalesSDK sharedInstance].airportsStorage```|Ability to search airport by IATA or retrieving airports list
-```AviasalesAirportsSearchPerformer```| ```[[AviasalesAirportsSearchPerformer alloc] init]```|Ability to search airport by string received from user
-```AviasalesNearestAirportsManager```|```[AviasalesSDK sharedInstance].nearestAirportsManager```|Find nearest airports to the current user.
-```AviasalesSDKAdsManager```|```[AviasalesSDK sharedInstance].adsManager```| Load and display advertisement connected with search parameters
-```JRSDKModelUtils```| ```[JRSDKModelUtils <method name here>]```|Util methods that help you in working with SDK objects
+Airports storage|```[AviasalesSDK sharedInstance].airportsStorage```|Finds airport by IATA, provides a list of airports
+```AviasalesAirportsSearchPerformer```| ```[[AviasalesAirportsSearchPerformer alloc] init]```|Finds airports by string
+```AviasalesNearestAirportsManager```|```[AviasalesSDK sharedInstance].nearestAirportsManager```|Finds nearest airports to the current user.
+```AviasalesSDKAdsManager```|```[AviasalesSDK sharedInstance].adsManager```| Loads and displays advertisement according to search parameters
+```JRSDKModelUtils```| ```[JRSDKModelUtils <method name here>]```|Util methods that help you to work with SDK objects

@@ -93,7 +93,7 @@ Start search performing:
 
 ```objc
 [searchPerformer performSearchWithSearchInfo:searchInfo
-                                     knowEnglish:YES];
+                             includeResultsInEnglish:YES];
 ```
 
 ####Parsing search result

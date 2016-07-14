@@ -1,6 +1,6 @@
 @protocol JRSDKCurrencyRate
 
-@property (nonatomic, retain) NSString *code;
-@property (nonatomic, retain) NSNumber *rate;
+@property (nonatomic, retain, readonly) JRSDKCurrency code;
+@property (nonatomic, retain, readonly) NSNumber *rate;
 
 @end

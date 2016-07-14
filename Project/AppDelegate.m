@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <AviasalesSDK/AviasalesSDK.h>
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate

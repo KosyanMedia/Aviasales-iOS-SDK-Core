@@ -1,14 +1,37 @@
+#if !TARGET_OS_WATCH
+#import <AviasalesSDK/DataDefines.h>
+#else
+#import <AviasalesWatchSDK/DataDefines.h>
+#endif
+
 @protocol JRSDKPaymentMethod;
 
-@protocol JRSDKGate
+@protocol JRSDKGate <NSObject>
+/**
+ * Average gate rating (float from 0 upto 5)
+ */
+@property (nonatomic, retain, readonly) NSNumber *averageRate;
 
-@property (nonatomic, retain) NSNumber *averageRate;
-@property (nonatomic, retain) NSString *currencyCode;
-@property (nonatomic, retain) NSString *gateID;
-@property (nonatomic, retain) NSString *label;
-@property (nonatomic, retain) NSNumber *mobileVersion;
-@property (nonatomic, retain) NSSet <id <JRSDKPaymentMethod>> *paymentMethods;
-@property (nonatomic, strong) NSNumber *productivity;
-@property (nonatomic, retain) NSNumber *isAirline;
+/**
+ Код валюты гейта трёхбуквенный код валюты (например: rub, usd, eur)
+ */
+@property (nonatomic, retain, readonly) JRSDKCurrency currencyCode;
+
+/**
+ * Gate identifier
+ */
+@property (nonatomic, retain, readonly) NSString *gateID;
+
+/**
+ * Gate name
+ */
+@property (nonatomic, strong, readonly) NSString *label;
+/**
+ * Gate website optimized for mobile
+ */
+@property (nonatomic, assign, readonly) BOOL isMobileVersion;
+@property (nonatomic, retain, readonly) NSSet <id <JRSDKPaymentMethod>> *paymentMethods;
+@property (nonatomic, strong, readonly) NSNumber *productivity;
+@property (nonatomic, retain, readonly) NSNumber *isAirline;
 
 @end

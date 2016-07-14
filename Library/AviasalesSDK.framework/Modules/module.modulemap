@@ -1,5 +1,5 @@
 framework module AviasalesSDK {
-  umbrella header "AviasalesLib.h"
+  umbrella header "AviasalesSDK.h"
 
   export *
   module * { export * }

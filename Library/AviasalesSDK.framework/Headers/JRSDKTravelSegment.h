@@ -1,7 +1,9 @@
+@protocol JRSDKAirport;
+
 @protocol JRSDKTravelSegment
 
 @property (nonatomic, retain) NSDate *departureDate;
-@property (nonatomic, retain) NSString *destinationIata;
-@property (nonatomic, retain) NSString *originIata;
+@property (nonatomic, retain) id<JRSDKAirport> originAirport;
+@property (nonatomic, retain) id<JRSDKAirport> destinationAirport;
 
 @end

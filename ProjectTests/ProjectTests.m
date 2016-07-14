@@ -8,6 +8,10 @@
 
 #import <XCTest/XCTest.h>
 
+static inline NSBundle *AviasalesBundle(){
+    return [NSBundle bundleWithURL:[[NSBundle mainBundle] URLForResource:@"AviasalesSDKResources" withExtension:@"bundle"]];
+}
+
 @interface ProjectTests : XCTestCase
 
 @end
@@ -24,4 +28,20 @@
     [super tearDown];
 }
 
+- (void)testHasAviasalesSDKResources {
+    NSBundle *const bundle = AviasalesBundle();
+    XCTAssertNotNil(bundle);
+}
+
+- (void)testSDKBundleContainsAllCurrenciesRates {
+    XCTAssertNotNil([AviasalesBundle() pathForResource:@"all_currencies_rates" ofType:@"json"]);
+}
+
+- (void)testSDKBundleContainsAirports {
+    XCTAssertNotNil([AviasalesBundle() pathForResource:@"airports" ofType:@"json"]);
+}
+
+- (void)testSDKBundleContainsShortAirports {
+    XCTAssertNotNil([AviasalesBundle() pathForResource:@"short_airports" ofType:@"json"]);
+}
 @end

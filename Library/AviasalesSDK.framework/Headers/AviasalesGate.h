@@ -3,35 +3,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AviasalesSDK/JRSDKGate.h>
 
 /**
  Гейт: авиакомпания или агентство, в котором можно приобрести билет
  */
-@interface AviasalesGate : NSObject
+@interface AviasalesGate : NSObject <JRSDKGate>
 
-/**
- Идентификатор гейта
- */
-@property (nonatomic, strong) NSString *gateID;
+#pragma mark - Protocol read-write redefinitions
 
-/**
- Название гейта
- */
-@property (nonatomic, strong) NSString *gateName;
-
-/**
- Код валюты гейта трёхбуквенный код валюты (например: rub, usd, eur)
- */
-@property (nonatomic, strong) NSString *currencyCode;
-
-/**
- Средний рейтинг гейта (число типа float от 0 до 5)
- */
-@property (nonatomic, strong) NSNumber *averageRate;
-
-/**
- Есть ли у гейта мобильная версия сайта
- */
-@property (nonatomic, assign) BOOL mobileVersion;
+@property (nonatomic, retain) NSNumber *averageRate;
+@property (nonatomic, retain) JRSDKCurrency currencyCode;
+@property (nonatomic, retain) NSString *gateID;
+@property (nonatomic, strong) NSString *label;
+@property (nonatomic, assign) BOOL isMobileVersion;
+@property (nonatomic, retain) NSSet <id <JRSDKPaymentMethod>> *paymentMethods;
+@property (nonatomic, strong) NSNumber *productivity;
+@property (nonatomic, retain) NSNumber *isAirline;
 
 @end

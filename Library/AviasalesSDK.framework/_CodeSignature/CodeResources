@@ -4,33 +4,25 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Aviasales_airports.json</key>
-		<data>
-		MzPwaK4jcdLjgYN2RBqcBAYoUTM=
-		</data>
-		<key>Aviasales_short_airports.json</key>
-		<data>
-		zqAM8IS4yf0bW8KDYsjzJu6IGHs=
-		</data>
-		<key>Headers/AviasalesAdvertisementManager.h</key>
-		<data>
-		xVD0S/oDPD9lWVbyf0LGjT4HPxE=
-		</data>
 		<key>Headers/AviasalesAirline.h</key>
 		<data>
-		dvGroQB2YGEVWzPxborSaB2gnzo=
+		YzFtn+UxAIgagWDih8xt5PVf9sc=
 		</data>
 		<key>Headers/AviasalesAirport.h</key>
 		<data>
-		eKeCn2N4QUMl0VYS1ZcLPUZzEV0=
+		Ikjv39fzNmLomdY3u1FOKzg0l+k=
 		</data>
-		<key>Headers/AviasalesAirportsStorage.h</key>
+		<key>Headers/AviasalesAirportsSearchPerformer.h</key>
 		<data>
-		+VuN+oN2uXInv9n4ymiYeuBG2Dc=
+		dXUWpBwsVbOojuCKDSlxDpbKXOk=
+		</data>
+		<key>Headers/AviasalesAirportsStorageProtocol.h</key>
+		<data>
+		adIi5wTbTrQJhyQVQAQ22w2bkMw=
 		</data>
 		<key>Headers/AviasalesFilter.h</key>
 		<data>
-		NkCILqaP9yrjr3iFtUUkUYT1n6I=
+		SicV3qhiFQSpa0a/16idf+68gCg=
 		</data>
 		<key>Headers/AviasalesFiltersBoundary.h</key>
 		<data>
@@ -38,91 +30,171 @@
 		</data>
 		<key>Headers/AviasalesFlight.h</key>
 		<data>
-		/NljRUTyP6+B4DgAofFUl7LsYr0=
+		7jhUDxNeDjWXsHjgYoDpYKg/Dgs=
+		</data>
+		<key>Headers/AviasalesFlightSegment.h</key>
+		<data>
+		EOR5no1Z3+jNUL2kABK6RRx6+aw=
 		</data>
 		<key>Headers/AviasalesGate.h</key>
 		<data>
-		x5LIicUyT0W+WXQBvwohi88iYnc=
+		fOEg2F47Qw/OhoZzZvFm3EaSpNk=
 		</data>
-		<key>Headers/AviasalesLib.h</key>
+		<key>Headers/AviasalesNearestAirportsManager.h</key>
 		<data>
-		VHCYNjLTxfgDnLX7g8h1wx72uX8=
+		tVrUv1PDmICvWCjvmIre6nSBSxw=
+		</data>
+		<key>Headers/AviasalesNumberUtil.h</key>
+		<data>
+		Mg9SmHORfOas+Him3UQ3aJ1iG54=
 		</data>
 		<key>Headers/AviasalesPrice.h</key>
 		<data>
-		V9QI6Vv1rxBId0TD1wDzgq/Y4nE=
+		MBysN7JpGwXkedN+zJ79LzbnPpM=
 		</data>
 		<key>Headers/AviasalesSDK.h</key>
 		<data>
-		yz94CHxN3kyPP8BQJ3mzoclDhnE=
+		38spAl4ZLLGUAJrPcDhfZUiXctk=
 		</data>
-		<key>Headers/AviasalesSearchParams.h</key>
+		<key>Headers/AviasalesSDKAdsManager.h</key>
 		<data>
-		6/7FopKlD3pgjfqFy11Ffg25Jqg=
+		5HRKaKm7xAH811awVTjiO7OOUrU=
 		</data>
-		<key>Headers/AviasalesSearchParamsCoder.h</key>
+		<key>Headers/AviasalesSDKAdsView.h</key>
 		<data>
-		hKIA9w/c7v/cJ+ZS5VbHY4jNPJ0=
+		xij5e5cyr518jETJoQ4ZCIH9ld0=
 		</data>
-		<key>Headers/AviasalesSearchParamsUrlCoder.h</key>
+		<key>Headers/AviasalesSDKInitialConfiguration.h</key>
 		<data>
-		1n/MgTPfaOkJ+6YAIX8cBJqVzpg=
+		60CH+FImWQ5n+EfN3hwV31y9cbw=
+		</data>
+		<key>Headers/AviasalesSDKPurchasePerformer.h</key>
+		<data>
+		sqzw9avjKcn6ItfiGHG1UlnFqGs=
 		</data>
 		<key>Headers/AviasalesSearchResponse.h</key>
 		<data>
-		OxAZ4TUWhgFJLIBskNqgXQZ0qOM=
+		oaEh+0mA6mKVB3tk78X/2smli2I=
 		</data>
 		<key>Headers/AviasalesTicket.h</key>
 		<data>
-		T7RTBlt2g2L4lHl0GuCCM8mVGrs=
+		DQMb+9JZEVAKnNUZWFjBm/iTsVM=
+		</data>
+		<key>Headers/DataDefines.h</key>
+		<data>
+		k4jQLKGFrF7W7GCr2XuGZwIc7uk=
+		</data>
+		<key>Headers/JRSDKAirline+Utils.h</key>
+		<data>
+		e/4ipdPKQXSkAu1bnv/HM5TWmeY=
 		</data>
 		<key>Headers/JRSDKAirline.h</key>
 		<data>
-		Ase1CvEusobpZOKCuv3SusB3kyg=
+		8MMvTuY2J2P01LXD5Deqj0UrSPQ=
+		</data>
+		<key>Headers/JRSDKAirport+Utils.h</key>
+		<data>
+		meJpKkzmBtQdlYdaReCkafdP7Ec=
 		</data>
 		<key>Headers/JRSDKAirport.h</key>
 		<data>
-		c47M8UjwDDL6mhxqRsJIwl3NBmE=
+		8zFp+v6wSFUWe07M7eQmtvFxk5c=
 		</data>
 		<key>Headers/JRSDKAlliance.h</key>
 		<data>
-		JSm+k+WtZ9VkkwAauiePw69a2SU=
+		j+FaBVTmvO9v/Hs5V4L0OFDCFVI=
+		</data>
+		<key>Headers/JRSDKConfigurableSearchInfo.h</key>
+		<data>
+		CP/LC7Gqd8Uo5UouRQ5oLHL2ASQ=
+		</data>
+		<key>Headers/JRSDKConfigurableTravelSegment.h</key>
+		<data>
+		AiEhcrNh+tqBU6EREkD7RWOWhDQ=
+		</data>
+		<key>Headers/JRSDKCurrency+Utils.h</key>
+		<data>
+		v4TEEKNFwaeomwDKVDi9Y/fRhBc=
 		</data>
 		<key>Headers/JRSDKCurrencyRate.h</key>
 		<data>
-		ENDOZcNnFiT1JLoyuy+ZpKLzgb0=
+		vJEX7JWm3Dzq6dJF6Gn1EGhKehI=
 		</data>
 		<key>Headers/JRSDKFlight.h</key>
 		<data>
-		ahiHN0ej0kLEUbWHkIhNwBqsB2M=
+		TdbnirALL9ZrOhid0Mw4wjWBzE4=
+		</data>
+		<key>Headers/JRSDKFlightSegment+Utils.h</key>
+		<data>
+		YhYbeTwObEVkjxdmHb4azOBF16A=
 		</data>
 		<key>Headers/JRSDKFlightSegment.h</key>
 		<data>
-		H07oWS8dhtTT2MPTKPn0Nn+AV2E=
+		cVIHekLyZsA+VHti/oqihRWKQRc=
 		</data>
 		<key>Headers/JRSDKGate.h</key>
 		<data>
-		zUiFIwjZfPMBoPzuqx2aOxDXdWE=
+		gm4ot2KENYjlilpTZB1naGopFKc=
+		</data>
+		<key>Headers/JRSDKModelUtils.h</key>
+		<data>
+		hBnINf0Ov46VA3kC36NzLhWxPjc=
 		</data>
 		<key>Headers/JRSDKPaymentMethod.h</key>
 		<data>
-		aljcGzA5RPd86QS/0Z8OctjEF04=
+		qN9Um9akoQMNFlCb2Gq0Kwp0P/Q=
+		</data>
+		<key>Headers/JRSDKPrice+Utils.h</key>
+		<data>
+		Z2+jmv5Ww+2GcoXQMzshwx3HyXQ=
 		</data>
 		<key>Headers/JRSDKPrice.h</key>
 		<data>
-		M1UgvPfrqmeRcSVb9CwFuCg2o+4=
+		LEyuCnq7BUDHgEx+efo9Ql3UPU8=
+		</data>
+		<key>Headers/JRSDKSearchInfo+Utils.h</key>
+		<data>
+		6wagNn3ihiiZa/5xhln6y4HWwjE=
 		</data>
 		<key>Headers/JRSDKSearchInfo.h</key>
 		<data>
-		yKemwWCPru3O2Z9Yu3SYCe7j4OU=
+		G010Fr7aZQ//G3S+XtFFWk5FvKU=
+		</data>
+		<key>Headers/JRSDKSearchPerformer.h</key>
+		<data>
+		xK2RU8B3lFR9eT+0E7HUAp7zZIQ=
+		</data>
+		<key>Headers/JRSDKSearchResult.h</key>
+		<data>
+		cyPlLK6laaWUbW8ZevgAKRNkYhk=
+		</data>
+		<key>Headers/JRSDKServerAPIError.h</key>
+		<data>
+		TxzcIg0kowH1I3zCBAiLw6HjO2s=
+		</data>
+		<key>Headers/JRSDKTicket+Utils.h</key>
+		<data>
+		8iUBuqzW876f5kf0B/ZBcbA57BY=
 		</data>
 		<key>Headers/JRSDKTicket.h</key>
 		<data>
-		39XN5dMFTXYmR7+A7tAvvHnAvYQ=
+		9Mi34737kEbrAU35G0yI7u9ou20=
+		</data>
+		<key>Headers/JRSDKTravelClass+Utils.h</key>
+		<data>
+		Aepfn5ocSDMCeJ2ToNYMWs7BtKU=
+		</data>
+		<key>Headers/JRSDKTravelSegment+Utils.h</key>
+		<data>
+		V3JOHDSYhTOTt9sGK2gfXkUKx+U=
 		</data>
 		<key>Headers/JRSDKTravelSegment.h</key>
 		<data>
-		Ijxa1WRut33F9xVuocUSu202Fog=
+		feNNVPMPeVsc8xQb2NxA+xUPMhA=
+		</data>
+		<key>Headers/JRStringUtil.h</key>
+		<data>
+		FOmhJTgrF5dS7w1hbA7GNk/fkfs=
 		</data>
 		<key>Headers/NSDate+AviasalesCoding.h</key>
 		<data>
@@ -130,162 +202,68 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Er03js5lDpcoqrCMOlmpeYtZUwE=
+		8QGp4Z7mB8ydTBh4DAo1T8y7pVw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		J3kKSVsNRL0CdH6ol85td/Co0SM=
+		f6qh34L6KyZFL8+r4wzp4DFYeqo=
 		</data>
-		<key>de.lproj/AviasalesStaticLibLocalizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5y6z+LfmnlnI2hSDvuYFlAEWFTc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>de.lproj/Aviasales_top_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			PTirYNIrky3iARWSiG2VKxVPqFk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/AviasalesStaticLibLocalizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8m1vBwyeAYeXtT8BCNeERC/vPjg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/Aviasales_top_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MzPwaK4jcdLjgYN2RBqcBAYoUTM=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>es.lproj/AviasalesStaticLibLocalizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			q/F93BdRBWL5YIpZxnIo/9bbXtg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>es.lproj/Aviasales_top_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Rhsiqb8d7CsX89iQ2wH0n63WJGA=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>ru.lproj/AviasalesStaticLibLocalizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1Beb8tt3NsbzWJMqy8pcodWTgS8=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>ru.lproj/Aviasales_top_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fXaAkLsI+Ia7HpnEHzOy7PUFHm4=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Aviasales_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MzPwaK4jcdLjgYN2RBqcBAYoUTM=
-			</data>
-			<key>hash2</key>
-			<data>
-			VhOPw/2uxfJENZkTwImCNIwvKh6H3IO6Wpn1rWhBYAk=
-			</data>
-		</dict>
-		<key>Aviasales_short_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			zqAM8IS4yf0bW8KDYsjzJu6IGHs=
-			</data>
-			<key>hash2</key>
-			<data>
-			6wRAtCzFVqQl1f+ULRwMAjJWgfz+jLZwm+SuGozG9c8=
-			</data>
-		</dict>
-		<key>Headers/AviasalesAdvertisementManager.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			xVD0S/oDPD9lWVbyf0LGjT4HPxE=
-			</data>
-			<key>hash2</key>
-			<data>
-			xq4QIhJQufDhsZ4nBEb9mF8tg3Ogb1mwZ+zDPTqVPiE=
-			</data>
-		</dict>
 		<key>Headers/AviasalesAirline.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dvGroQB2YGEVWzPxborSaB2gnzo=
+			YzFtn+UxAIgagWDih8xt5PVf9sc=
 			</data>
 			<key>hash2</key>
 			<data>
-			xyuNyav0pgcwFQe6++VaIbhels/1s5GKM1EXrCzIkCE=
+			ql+BMYQ8SO94WxDj6PuSoiVwHZCDTXbMccGrikIq6BU=
 			</data>
 		</dict>
 		<key>Headers/AviasalesAirport.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			eKeCn2N4QUMl0VYS1ZcLPUZzEV0=
+			Ikjv39fzNmLomdY3u1FOKzg0l+k=
 			</data>
 			<key>hash2</key>
 			<data>
-			UuLZqOMAHQYDeLiYizcJsoD/rHagxvxKadPS/oBZhV8=
+			vf/txB2UlQ4lZ7m8EpyZ3gRf5V5cXnW0TZpZUF4VZBc=
 			</data>
 		</dict>
-		<key>Headers/AviasalesAirportsStorage.h</key>
+		<key>Headers/AviasalesAirportsSearchPerformer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+VuN+oN2uXInv9n4ymiYeuBG2Dc=
+			dXUWpBwsVbOojuCKDSlxDpbKXOk=
 			</data>
 			<key>hash2</key>
 			<data>
-			cS+wJ2ALt+xMjuIC+rDLIGkFyV8/vng7S2Exf2471r0=
+			Y0VSqu6icsCgMcnsNgAetzPPr7xrAquYieZAuSP6Z5Q=
+			</data>
+		</dict>
+		<key>Headers/AviasalesAirportsStorageProtocol.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			adIi5wTbTrQJhyQVQAQ22w2bkMw=
+			</data>
+			<key>hash2</key>
+			<data>
+			E6XKeIgHLceM/cOU+bx14ndQI7ueyXSTriegdZcy/0Y=
 			</data>
 		</dict>
 		<key>Headers/AviasalesFilter.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NkCILqaP9yrjr3iFtUUkUYT1n6I=
+			SicV3qhiFQSpa0a/16idf+68gCg=
 			</data>
 			<key>hash2</key>
 			<data>
-			NnGKhst1VcognIf3LbkTvmioozH5FarnPTmJ7GlTn2g=
+			txgY6KR8Tr69DVJ6lMNRVBaPJLD0E4VQLWbzICZ2w24=
 			</data>
 		</dict>
 		<key>Headers/AviasalesFiltersBoundary.h</key>
@@ -303,242 +281,462 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/NljRUTyP6+B4DgAofFUl7LsYr0=
+			7jhUDxNeDjWXsHjgYoDpYKg/Dgs=
 			</data>
 			<key>hash2</key>
 			<data>
-			iXJ+osCwpuhBqC5MXV9N9S76kKbwAxn9PmLuZTkAsLA=
+			EvpburRycLrz53m7at9yQGCAPXEesD+6e+oqnFAvCsc=
+			</data>
+		</dict>
+		<key>Headers/AviasalesFlightSegment.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EOR5no1Z3+jNUL2kABK6RRx6+aw=
+			</data>
+			<key>hash2</key>
+			<data>
+			5WHVLj+vl0IZ1HRyS55SpQAg4nkzpmdi8ovfXYhiDzc=
 			</data>
 		</dict>
 		<key>Headers/AviasalesGate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			x5LIicUyT0W+WXQBvwohi88iYnc=
+			fOEg2F47Qw/OhoZzZvFm3EaSpNk=
 			</data>
 			<key>hash2</key>
 			<data>
-			VPhRF7fBV+vixtfjUhZSoHeFb+XLT5Ey3xVPCnbORgs=
+			ZaFTS2tEDqeAM3rJGyBTI+0Kp/qMt1BHrdPOiBhLsks=
 			</data>
 		</dict>
-		<key>Headers/AviasalesLib.h</key>
+		<key>Headers/AviasalesNearestAirportsManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VHCYNjLTxfgDnLX7g8h1wx72uX8=
+			tVrUv1PDmICvWCjvmIre6nSBSxw=
 			</data>
 			<key>hash2</key>
 			<data>
-			KY1KppFqLOTs62M7+RsGlazkrXvPXIYoZcenyUZwiDM=
+			baaW1M55bAwu8zSvNXZxZurLtGk1BaX//3Kr9A2KdwI=
+			</data>
+		</dict>
+		<key>Headers/AviasalesNumberUtil.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Mg9SmHORfOas+Him3UQ3aJ1iG54=
+			</data>
+			<key>hash2</key>
+			<data>
+			zpN8x6o6m2EP+WTt5wq8TIFwikp3xFxj484h2qCd88A=
 			</data>
 		</dict>
 		<key>Headers/AviasalesPrice.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			V9QI6Vv1rxBId0TD1wDzgq/Y4nE=
+			MBysN7JpGwXkedN+zJ79LzbnPpM=
 			</data>
 			<key>hash2</key>
 			<data>
-			YI20wgRPnhlAYIl0g5VAoSS4Agb83jcY1fJypBPfSt8=
+			YzAVeyn0eLxvFMh7K6qoG/Yu/pMVimUYMQEMGNTr0cc=
 			</data>
 		</dict>
 		<key>Headers/AviasalesSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yz94CHxN3kyPP8BQJ3mzoclDhnE=
+			38spAl4ZLLGUAJrPcDhfZUiXctk=
 			</data>
 			<key>hash2</key>
 			<data>
-			VUyb3iznSOWZbztujObZGv8wcO1OgyeUZjBnBHiF7dc=
+			0sLlZygoKbFimQeKanNOeSeuiGq5cD/wrfVvHvAptHA=
 			</data>
 		</dict>
-		<key>Headers/AviasalesSearchParams.h</key>
+		<key>Headers/AviasalesSDKAdsManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6/7FopKlD3pgjfqFy11Ffg25Jqg=
+			5HRKaKm7xAH811awVTjiO7OOUrU=
 			</data>
 			<key>hash2</key>
 			<data>
-			sIw/NB1pihlLiCTXLgquO1OciHcuZVJWjTBzWvMB1JQ=
+			+RDoeJCKEdLgVxYg3aXvYfC0URb9vHhcJ4KUApTAopY=
 			</data>
 		</dict>
-		<key>Headers/AviasalesSearchParamsCoder.h</key>
+		<key>Headers/AviasalesSDKAdsView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hKIA9w/c7v/cJ+ZS5VbHY4jNPJ0=
+			xij5e5cyr518jETJoQ4ZCIH9ld0=
 			</data>
 			<key>hash2</key>
 			<data>
-			WZajsxfyn5dT2s1bcpaj1MotKTJAHRs70uJ9x5gzCRc=
+			LcgN/cVrhT790B4J78VBgkNe17O0v9phWW9k1H0x67E=
 			</data>
 		</dict>
-		<key>Headers/AviasalesSearchParamsUrlCoder.h</key>
+		<key>Headers/AviasalesSDKInitialConfiguration.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1n/MgTPfaOkJ+6YAIX8cBJqVzpg=
+			60CH+FImWQ5n+EfN3hwV31y9cbw=
 			</data>
 			<key>hash2</key>
 			<data>
-			wOOBkbB2u84gkm53G9BXYx7XaWLGoZ+DopTWa7fuARc=
+			L8Zcs4ETy+VItptSFdJhihz0tDoQOhZLYbL46Jn3Rw8=
+			</data>
+		</dict>
+		<key>Headers/AviasalesSDKPurchasePerformer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sqzw9avjKcn6ItfiGHG1UlnFqGs=
+			</data>
+			<key>hash2</key>
+			<data>
+			j3p++06SFUObQGfDnxNd77kqsdeyUtiPbT//q28yMak=
 			</data>
 		</dict>
 		<key>Headers/AviasalesSearchResponse.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OxAZ4TUWhgFJLIBskNqgXQZ0qOM=
+			oaEh+0mA6mKVB3tk78X/2smli2I=
 			</data>
 			<key>hash2</key>
 			<data>
-			wewGkFgNQH8+MgTg+dBIM7nusUCCce9F2vtm40uyvEs=
+			Jbaum+tZBwwH6b6yOA2x9FGqfxateWUZ4+49+x3ONSQ=
 			</data>
 		</dict>
 		<key>Headers/AviasalesTicket.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			T7RTBlt2g2L4lHl0GuCCM8mVGrs=
+			DQMb+9JZEVAKnNUZWFjBm/iTsVM=
 			</data>
 			<key>hash2</key>
 			<data>
-			nU1dM1BPXrWHcg/3MF5pdnZOmEQVjXMHAzKSsfYceQc=
+			FI7QV3gDTlYiUFmRYwWZxyuWEDHlmShJPdoLHuEFXlY=
+			</data>
+		</dict>
+		<key>Headers/DataDefines.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			k4jQLKGFrF7W7GCr2XuGZwIc7uk=
+			</data>
+			<key>hash2</key>
+			<data>
+			DnERdMv0F2XyZ/9C2Uzau3sQXhKf4xfn4UUSPtlAdDo=
+			</data>
+		</dict>
+		<key>Headers/JRSDKAirline+Utils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			e/4ipdPKQXSkAu1bnv/HM5TWmeY=
+			</data>
+			<key>hash2</key>
+			<data>
+			n0iIZIJiYB61ZjUP5LleojoChGM6O/fy0qIiiJmPebI=
 			</data>
 		</dict>
 		<key>Headers/JRSDKAirline.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ase1CvEusobpZOKCuv3SusB3kyg=
+			8MMvTuY2J2P01LXD5Deqj0UrSPQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			AeWpP8FeRfG8p+wXOApLw+9+elzRixXfKiKNUNzy2vk=
+			kbMdO/1g1tj+AYl+oCmvJQlVpE095zB3sprRiCwJSVY=
+			</data>
+		</dict>
+		<key>Headers/JRSDKAirport+Utils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			meJpKkzmBtQdlYdaReCkafdP7Ec=
+			</data>
+			<key>hash2</key>
+			<data>
+			C9N4JnfEdG+T8qPVNaAaEgn/67oQlV/uoBiH6T9CMu8=
 			</data>
 		</dict>
 		<key>Headers/JRSDKAirport.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			c47M8UjwDDL6mhxqRsJIwl3NBmE=
+			8zFp+v6wSFUWe07M7eQmtvFxk5c=
 			</data>
 			<key>hash2</key>
 			<data>
-			0OpjYoz7VWPJ+cHxdnA6hZ25zo+OGbPH9YZj0O2Tsfw=
+			rtM7qibVpALe7z6jxwzv0vd8RYXKfveF4QmGN4+uX8Y=
 			</data>
 		</dict>
 		<key>Headers/JRSDKAlliance.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JSm+k+WtZ9VkkwAauiePw69a2SU=
+			j+FaBVTmvO9v/Hs5V4L0OFDCFVI=
 			</data>
 			<key>hash2</key>
 			<data>
-			feThSQVpMoJqJnJEP/zyIJuR1riKNSwZlXSrq5t+bUI=
+			xYQzFMNNmJSiDW8XtaDIzIDVvBFWJX6im5zqhaOsy14=
+			</data>
+		</dict>
+		<key>Headers/JRSDKConfigurableSearchInfo.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CP/LC7Gqd8Uo5UouRQ5oLHL2ASQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			z+n++pD2z3t4xSBGkobASDguJXqc7+r3ndDoVSBmwQU=
+			</data>
+		</dict>
+		<key>Headers/JRSDKConfigurableTravelSegment.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AiEhcrNh+tqBU6EREkD7RWOWhDQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			5vOWUlkLK4bMnW9dvvbR+wzW9FDBtp8hu2l5LkWKkq0=
+			</data>
+		</dict>
+		<key>Headers/JRSDKCurrency+Utils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			v4TEEKNFwaeomwDKVDi9Y/fRhBc=
+			</data>
+			<key>hash2</key>
+			<data>
+			Sk5C8eXcQ2QsnRt0utRqJ2YIYIx66rX6q+FL6vkLGt0=
 			</data>
 		</dict>
 		<key>Headers/JRSDKCurrencyRate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ENDOZcNnFiT1JLoyuy+ZpKLzgb0=
+			vJEX7JWm3Dzq6dJF6Gn1EGhKehI=
 			</data>
 			<key>hash2</key>
 			<data>
-			0tcpyJM2pVkV001XH205Wcf9t0wOZg69LAUVWmlpg6k=
+			9vnRLy3WI0N0sNhbnWwn3WH9tJAMoiPsSghz8t9P4aI=
 			</data>
 		</dict>
 		<key>Headers/JRSDKFlight.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ahiHN0ej0kLEUbWHkIhNwBqsB2M=
+			TdbnirALL9ZrOhid0Mw4wjWBzE4=
 			</data>
 			<key>hash2</key>
 			<data>
-			wXvLl9dXLgsShyRXMNEfpbg2jFMuTN2rfzPtGb2JbdU=
+			NdMcpMnkedtWXszGRLNCBd1OyJN4olLquE5GZCMEhvI=
+			</data>
+		</dict>
+		<key>Headers/JRSDKFlightSegment+Utils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YhYbeTwObEVkjxdmHb4azOBF16A=
+			</data>
+			<key>hash2</key>
+			<data>
+			Y3UxtHPCZoWr4S0wgdsH6g9RxNxsHBPPWaZnWlIgx68=
 			</data>
 		</dict>
 		<key>Headers/JRSDKFlightSegment.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H07oWS8dhtTT2MPTKPn0Nn+AV2E=
+			cVIHekLyZsA+VHti/oqihRWKQRc=
 			</data>
 			<key>hash2</key>
 			<data>
-			y/M1f6ArJfpNEfN2/REQXA8/Pup0+vqFEOXCYkoS4Qw=
+			+DARzdXDOHMsGD7sPfIqvLV6b5rU5GCUb18Ed16mnus=
 			</data>
 		</dict>
 		<key>Headers/JRSDKGate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zUiFIwjZfPMBoPzuqx2aOxDXdWE=
+			gm4ot2KENYjlilpTZB1naGopFKc=
 			</data>
 			<key>hash2</key>
 			<data>
-			2tpj2BQXScGb1j7ofb6zG/Tj7z0yKv9F+GyqlFyGZ4g=
+			C3Ag9epX7i/VJA86iTc6ov2MxSum82JqFkzT/Fa0Er8=
+			</data>
+		</dict>
+		<key>Headers/JRSDKModelUtils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hBnINf0Ov46VA3kC36NzLhWxPjc=
+			</data>
+			<key>hash2</key>
+			<data>
+			xIOH0p763r3WO7VQ4bfC38YZdEdvyRDgxsKx7j1b7O4=
 			</data>
 		</dict>
 		<key>Headers/JRSDKPaymentMethod.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			aljcGzA5RPd86QS/0Z8OctjEF04=
+			qN9Um9akoQMNFlCb2Gq0Kwp0P/Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			JizUF5dntOIa1XvbSF0VwRRNAto65tJfsHo6ulQQBeA=
+			VnQ3GSdO8Sk2fcBXiLqi37eMvFvHoNfEu+lX/Wowrd8=
+			</data>
+		</dict>
+		<key>Headers/JRSDKPrice+Utils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Z2+jmv5Ww+2GcoXQMzshwx3HyXQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			AxMsG4PXfMxaCDlGY8+Q26uUe0ButXiQW+l9P+F6AWk=
 			</data>
 		</dict>
 		<key>Headers/JRSDKPrice.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			M1UgvPfrqmeRcSVb9CwFuCg2o+4=
+			LEyuCnq7BUDHgEx+efo9Ql3UPU8=
 			</data>
 			<key>hash2</key>
 			<data>
-			FQT7710P66G4eCuLNSkzhtxZXVO3iZMLOkDrzI4I95Q=
+			1VqziciVensega8cjJucuh6LDu0xnL2p7KwB50x8fVw=
+			</data>
+		</dict>
+		<key>Headers/JRSDKSearchInfo+Utils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6wagNn3ihiiZa/5xhln6y4HWwjE=
+			</data>
+			<key>hash2</key>
+			<data>
+			ci/jDl0odkc6BNZJAYUtPcHGtm+lqwnkJeByeKb3NCA=
 			</data>
 		</dict>
 		<key>Headers/JRSDKSearchInfo.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yKemwWCPru3O2Z9Yu3SYCe7j4OU=
+			G010Fr7aZQ//G3S+XtFFWk5FvKU=
 			</data>
 			<key>hash2</key>
 			<data>
-			BCrjUZVtdfifIG41+jQW2M315C6KewXHHHPy9bWIw20=
+			aGmIDGqYenB14tDOsTr9W+M8UYEeGtJo99amEts4ug0=
+			</data>
+		</dict>
+		<key>Headers/JRSDKSearchPerformer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xK2RU8B3lFR9eT+0E7HUAp7zZIQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			f76jfnBwUJWRF2lX6YB1WYzXS8+s1O0XddT6GN4w+p8=
+			</data>
+		</dict>
+		<key>Headers/JRSDKSearchResult.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cyPlLK6laaWUbW8ZevgAKRNkYhk=
+			</data>
+			<key>hash2</key>
+			<data>
+			41Z/XfoWmI7/t7+PTfdHuPsFDgbDxzyuduVIBKdQbJk=
+			</data>
+		</dict>
+		<key>Headers/JRSDKServerAPIError.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			TxzcIg0kowH1I3zCBAiLw6HjO2s=
+			</data>
+			<key>hash2</key>
+			<data>
+			wg69F2q9aymNI+gD57EuTQG/NfyVo4SQBczgVBn/aM8=
+			</data>
+		</dict>
+		<key>Headers/JRSDKTicket+Utils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8iUBuqzW876f5kf0B/ZBcbA57BY=
+			</data>
+			<key>hash2</key>
+			<data>
+			NNutVUxEU8DFqKUzhbS32CbZj84CHqJGVlAjV/JH3uo=
 			</data>
 		</dict>
 		<key>Headers/JRSDKTicket.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			39XN5dMFTXYmR7+A7tAvvHnAvYQ=
+			9Mi34737kEbrAU35G0yI7u9ou20=
 			</data>
 			<key>hash2</key>
 			<data>
-			RvpllnQSuNMRi3j1Pq5v5uI0AGsAVSudKuc/qmadalw=
+			VpPKdvp3Rn4y89adxydPrkFbcxaL5Q18WaU/G2sIKGY=
+			</data>
+		</dict>
+		<key>Headers/JRSDKTravelClass+Utils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Aepfn5ocSDMCeJ2ToNYMWs7BtKU=
+			</data>
+			<key>hash2</key>
+			<data>
+			Roc2ADe49RGoIabB6+2ndUqNF+x5eDt8w8/l2irMyHg=
+			</data>
+		</dict>
+		<key>Headers/JRSDKTravelSegment+Utils.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			V3JOHDSYhTOTt9sGK2gfXkUKx+U=
+			</data>
+			<key>hash2</key>
+			<data>
+			I/YiztgLQtn0njQIyU1Z3yoJsM1iO0JfUOl8zinmiJ0=
 			</data>
 		</dict>
 		<key>Headers/JRSDKTravelSegment.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ijxa1WRut33F9xVuocUSu202Fog=
+			feNNVPMPeVsc8xQb2NxA+xUPMhA=
 			</data>
 			<key>hash2</key>
 			<data>
-			ro30jACWaYRTQKMBc7aEMadLwxMBbwcicVrZBux/hxQ=
+			42b4FgslRZ+AJR7u9Na7YQXmN3G0hlvzC/tHUCud5po=
+			</data>
+		</dict>
+		<key>Headers/JRStringUtil.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FOmhJTgrF5dS7w1hbA7GNk/fkfs=
+			</data>
+			<key>hash2</key>
+			<data>
+			J7BVYd1ZsGcsWM20zrAqqQ5byF+Tf+42iUTFCbg/GY0=
 			</data>
 		</dict>
 		<key>Headers/NSDate+AviasalesCoding.h</key>
@@ -556,116 +754,12 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			J3kKSVsNRL0CdH6ol85td/Co0SM=
+			f6qh34L6KyZFL8+r4wzp4DFYeqo=
 			</data>
 			<key>hash2</key>
 			<data>
-			3dwajQs0x//PovZnbVScncIDsi4PEXSqQGWlRcvj45w=
+			mjQ1BAd4zQhJ/x0uPpk7j1kTGsODOkhZQv2p6A0R7nk=
 			</data>
-		</dict>
-		<key>de.lproj/AviasalesStaticLibLocalizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5y6z+LfmnlnI2hSDvuYFlAEWFTc=
-			</data>
-			<key>hash2</key>
-			<data>
-			KQOtbOwqVH691o7cMafXkS3I5KxPawdHGPeLkhA0ufg=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>de.lproj/Aviasales_top_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			PTirYNIrky3iARWSiG2VKxVPqFk=
-			</data>
-			<key>hash2</key>
-			<data>
-			w5LMbvjm2whozCGWihuJsyD/WFECqoFzOYugNTKZ5WA=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/AviasalesStaticLibLocalizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8m1vBwyeAYeXtT8BCNeERC/vPjg=
-			</data>
-			<key>hash2</key>
-			<data>
-			adh6rIAO6thEPn195xIKVfmoxcew8D09GMLyVGfc6eA=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/Aviasales_top_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			MzPwaK4jcdLjgYN2RBqcBAYoUTM=
-			</data>
-			<key>hash2</key>
-			<data>
-			VhOPw/2uxfJENZkTwImCNIwvKh6H3IO6Wpn1rWhBYAk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>es.lproj/AviasalesStaticLibLocalizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			q/F93BdRBWL5YIpZxnIo/9bbXtg=
-			</data>
-			<key>hash2</key>
-			<data>
-			GClO7u+xnuIGM1p+0a5sJSBdbbzFVIg5TVv32yhpd74=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>es.lproj/Aviasales_top_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Rhsiqb8d7CsX89iQ2wH0n63WJGA=
-			</data>
-			<key>hash2</key>
-			<data>
-			3RjfD31QixB0af8WoX4Vx0Owo9aeifYF7Qi4FYLgNUQ=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>ru.lproj/AviasalesStaticLibLocalizable.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1Beb8tt3NsbzWJMqy8pcodWTgS8=
-			</data>
-			<key>hash2</key>
-			<data>
-			SBWevzQNoSpgeW7jOEHshonvbCgI14xdmMU9Hd6wB7k=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>ru.lproj/Aviasales_top_airports.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fXaAkLsI+Ia7HpnEHzOy7PUFHm4=
-			</data>
-			<key>hash2</key>
-			<data>
-			kALIWO9gjYzy+/aeDt1d0HmB2hJHMcLEeo0lzEpiYS8=
-			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>

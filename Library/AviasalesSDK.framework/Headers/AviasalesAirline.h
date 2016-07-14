@@ -3,35 +3,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AviasalesSDK/JRSDKAirline.h>
 
 /**
  Авиакомпания
  */
-@interface AviasalesAirline : NSObject
+@interface AviasalesAirline : NSObject <JRSDKAirline>
 
-/**
- Двухбуквенный IATA-код авиакомпании
- */
-@property (nonatomic, strong) NSString *iata;
+#pragma mark - Protocol read-write redefinitions
 
-/**
- Название авиакомпании
- */
-@property (nonatomic, strong) NSString *name;
-
-/**
- Название альянса, в который входит авиакомпания
- */
-@property (nonatomic, strong) NSString *allianceName;
-
-/**
- Средний рейтинг авиакомпании (число типа float от 0 до 5)
- */
-@property (nonatomic, strong) NSNumber *averageRate;
-
-/**
- URL для загрузки логотипа авиакомпании
- */
-@property (nonatomic, readonly) NSURL *logoURL;
+@property (nonatomic, retain) NSNumber *averageRate;
+@property (nonatomic, assign) BOOL lowcost;
+@property (nonatomic, retain) JRSDKIATA iata;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) id <JRSDKAlliance> alliance;
 
 @end

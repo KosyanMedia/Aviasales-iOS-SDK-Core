@@ -3,8 +3,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AviasalesTicket.h"
-#import "AviasalesSearchResponse.h"
+#import <AviasalesSDK/AviasalesTicket.h>
+#import <AviasalesSDK/AviasalesSearchResponse.h>
 
 @protocol AviasalesFilterDelegate <NSObject>
 @required

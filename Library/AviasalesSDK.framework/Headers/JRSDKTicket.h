@@ -1,16 +1,24 @@
-@protocol JRSDKAirline, JRSDKFlightSegment, JRSDKPrice;
+@protocol JRSDKAirline, JRSDKFlightSegment, JRSDKPrice, JRSDKSearchInfo;
 
-@protocol JRSDKTicket
+@protocol JRSDKTicket <NSObject>
 
-@property (nonatomic, retain) NSSet <id <JRSDKFlightSegment>> *unorderedFlightSegments;
-@property (nonatomic, retain) NSSet <id <JRSDKPrice>> *unorderedPrices;
-@property (nonatomic, retain) id <JRSDKAirline> mainAirline;
-@property (nonatomic, retain) NSNumber *simpleRating;
-@property (nonatomic, retain) NSNumber *totalDuration;
-@property (nonatomic, retain) NSNumber *delayDuration;
-@property (nonatomic, assign) BOOL overnightStopover;
+@property (nonatomic, retain, readonly) NSOrderedSet <id <JRSDKFlightSegment>> *flightSegments;
+/**
+ Набор вариантов цен на билет, отсортированный по возрастанию
+ */
+@property (nonatomic, strong, readonly) NSOrderedSet <id <JRSDKPrice>> *prices;
+/**
+ Основная авиавкомпания для данного билета
+ */
+@property (nonatomic, retain, readonly) id <JRSDKAirline> mainAirline;
+@property (nonatomic, retain, readonly) NSNumber *simpleRating;
+@property (nonatomic, retain, readonly) NSNumber *totalDuration;
+@property (nonatomic, retain, readonly) NSNumber *delayDuration;
+@property (nonatomic, assign, readonly) BOOL hasOvernightStopover;
 
-@property (nonatomic, retain) NSString *sign;
-@property (nonatomic, assign) BOOL fromTrustedGate;
+@property (nonatomic, retain, readonly) NSString *sign;
+@property (nonatomic, assign, readonly) BOOL isFromTrustedGate;
+
+- (id <JRSDKSearchInfo>)searchInfo;
 
 @end

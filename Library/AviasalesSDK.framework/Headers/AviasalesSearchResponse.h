@@ -3,13 +3,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AviasalesFiltersBoundary.h"
-#import "AviasalesPrice.h"
+#import <AviasalesSDK/AviasalesFiltersBoundary.h>
+#import <AviasalesSDK/AviasalesPrice.h>
 
 /**
  Ответ поискового сервиса
  */
-@interface AviasalesSearchResponse : NSObject
+@interface AviasalesSearchResponse : NSObject //Deprecated
 
 /**
  Массив объектов AviasalesTicket

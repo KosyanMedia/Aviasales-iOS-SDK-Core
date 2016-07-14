@@ -14,8 +14,9 @@
 		070625D91CC4F03B00974AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070625D81CC4F03B00974AB4 /* Assets.xcassets */; };
 		070625DC1CC4F03B00974AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070625DA1CC4F03B00974AB4 /* LaunchScreen.storyboard */; };
 		070625E71CC4F03B00974AB4 /* ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070625E61CC4F03B00974AB4 /* ProjectTests.m */; };
-		07C31E5E1CC4F07400F77BED /* AviasalesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07C31E5C1CC4F06D00F77BED /* AviasalesSDK.framework */; };
-		07C31E5F1CC4F07400F77BED /* AviasalesSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07C31E5C1CC4F06D00F77BED /* AviasalesSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		076FAB4E1D37C9830044FEF2 /* AviasalesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076FAB4C1D37C9830044FEF2 /* AviasalesSDK.framework */; };
+		076FAB4F1D37C9830044FEF2 /* AviasalesSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 076FAB4D1D37C9830044FEF2 /* AviasalesSDKResources.bundle */; };
+		076FAB501D37CC0E0044FEF2 /* AviasalesSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 076FAB4D1D37C9830044FEF2 /* AviasalesSDKResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				07C31E5F1CC4F07400F77BED /* AviasalesSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +56,8 @@
 		070625E21CC4F03B00974AB4 /* ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		070625E61CC4F03B00974AB4 /* ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectTests.m; sourceTree = "<group>"; };
 		070625E81CC4F03B00974AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07C31E5C1CC4F06D00F77BED /* AviasalesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AviasalesSDK.framework; sourceTree = "<group>"; };
+		076FAB4C1D37C9830044FEF2 /* AviasalesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AviasalesSDK.framework; sourceTree = "<group>"; };
+		076FAB4D1D37C9830044FEF2 /* AviasalesSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AviasalesSDKResources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C31E5E1CC4F07400F77BED /* AviasalesSDK.framework in Frameworks */,
+				076FAB4E1D37C9830044FEF2 /* AviasalesSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +82,7 @@
 		070625C01CC4F03B00974AB4 = {
 			isa = PBXGroup;
 			children = (
-				07C31E5B1CC4F06D00F77BED /* Library */,
+				076FAB4B1D37C9830044FEF2 /* Library */,
 				070625CB1CC4F03B00974AB4 /* Project */,
 				070625E51CC4F03B00974AB4 /* ProjectTests */,
 				070625CA1CC4F03B00974AB4 /* Products */,
@@ -130,10 +131,11 @@
 			path = ProjectTests;
 			sourceTree = "<group>";
 		};
-		07C31E5B1CC4F06D00F77BED /* Library */ = {
+		076FAB4B1D37C9830044FEF2 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				07C31E5C1CC4F06D00F77BED /* AviasalesSDK.framework */,
+				076FAB4C1D37C9830044FEF2 /* AviasalesSDK.framework */,
+				076FAB4D1D37C9830044FEF2 /* AviasalesSDKResources.bundle */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -221,6 +223,7 @@
 			files = (
 				070625DC1CC4F03B00974AB4 /* LaunchScreen.storyboard in Resources */,
 				070625D91CC4F03B00974AB4 /* Assets.xcassets in Resources */,
+				076FAB4F1D37C9830044FEF2 /* AviasalesSDKResources.bundle in Resources */,
 				070625D71CC4F03B00974AB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076FAB501D37CC0E0044FEF2 /* AviasalesSDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

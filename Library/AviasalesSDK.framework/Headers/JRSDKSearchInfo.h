@@ -1,4 +1,4 @@
-@protocol JRSDKTravelSegment, JRSDKTicket;
+@protocol JRSDKTravelSegment, JRSDKTicket, JRSDKSearchResult;
 
 typedef NS_ENUM (NSInteger, JRSDKTravelClass) {
     JRSDKTravelClassEconomy = 0,
@@ -7,16 +7,15 @@ typedef NS_ENUM (NSInteger, JRSDKTravelClass) {
     JRSDKTravelClassFirst = 3
 };
 
-@protocol JRSDKSearchInfo
+@protocol JRSDKSearchInfo <NSObject>
 
-@property (nonatomic, assign) JRSDKTravelClass travelClass;
-@property (nonatomic, assign) NSInteger adults;
-@property (nonatomic, assign) NSInteger children;
-@property (nonatomic, assign) NSInteger infants;
+@property (nonatomic, assign, readonly) JRSDKTravelClass travelClass;
+@property (nonatomic, assign, readonly) NSInteger adults;
+@property (nonatomic, assign, readonly) NSInteger children;
+@property (nonatomic, assign, readonly) NSInteger infants;
 
-@property (nonatomic, retain) NSOrderedSet <id <JRSDKTravelSegment>> *travelSegments;
+@property (nonatomic, retain, readonly) NSOrderedSet <id <JRSDKTravelSegment>> *travelSegments;
 
-@property (nonatomic, retain) NSSet <id <JRSDKTicket>> *searchTickets;
-@property (nonatomic, retain) NSSet <id <JRSDKTicket>> *strictSearchTickets;
+@property (nonatomic, strong, readonly) id<JRSDKSearchResult> searchResult;
 
 @end

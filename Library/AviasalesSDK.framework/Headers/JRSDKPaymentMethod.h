@@ -1,5 +1,5 @@
-@protocol JRSDKPaymentMethod
+@protocol JRSDKPaymentMethod <NSObject>
 
-@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain, readonly) NSString *name;
 
 @end

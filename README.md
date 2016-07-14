@@ -50,7 +50,7 @@ searchInfo.travelClass = JRSDKTravelClassBusiness;
 Set travel dates and airports (using airports storage from SDK):
 
 ```objc
-JRSDKConfigurableTravelSegment *firstTravelSegment = [[JRSDKConfigurableSearchInfo alloc] init];
+JRSDKConfigurableTravelSegment *firstTravelSegment = [[JRSDKConfigurableTravelSegment alloc] init];
 firstTravelSegment.departureDate = [NSDate date];
 firstTravelSegment.originAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"LED"];
 firstTravelSegment.destinationAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"MOW"];

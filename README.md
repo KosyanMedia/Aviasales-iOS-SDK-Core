@@ -14,13 +14,13 @@ The easiest way is to use [CocoaPods](http://cocoapods.org). It takes care of al
 pod 'AviasalesSDK', '~> 1.3.3-beta6'
 ```
 
-We recomend import AviasalesSDK.h in each file where you use objects or protocols from SDK.
+We recomend import ```AviasalesSDK.h``` in each file where you use objects or protocols from SDK.
 
 ```objc
 #import <AviasalesSDK/AviasalesSDK.h>
 ```
 
-Prefer to use ```AviasalesSDK``` object to interact with SDK. You need to configure it with apropriate token and marker like this:
+Configure ```AviasalesSDK``` object before interaction with SDK like this:
 
 ```objc
 AviasalesSDKInitialConfiguration *configuration = [AviasalesSDKInitialConfiguration configurationWithAPIToken:@"Your api token here"
@@ -33,21 +33,21 @@ Don't forget to replace two placeholders in this example with actual values.
 
 ## Features
 ### ✈️ Flight Tickets Search
-Specify search parameters using any object that confirms to ```JRSDKSearchInfo``` protocol. Simple implementation of this protocol availble with ```JRSDKConfigurableSearchInfo``` interface but feel free to create your own if needed. Look at example below.
+Specify search parameters using any object that confirms to ```JRSDKSearchInfo``` protocol. Simple implementation of this protocol availble in ```JRSDKConfigurableSearchInfo``` interface, but feel free to create your own if needed. Look at example below.
 
 #### Create search info
-Create simple object that describes out search:
+Create simple object that describes new search:
 
 ```objc
 JRSDKConfigurableSearchInfo *searchInfo = [[JRSDKConfigurableSearchInfo alloc] init];
 ```
-Set necessary parameters for the search (**adults = 2** and **travelClass = Business** means that two adults would travel by business class):
+Set necessary parameters for the search (*adults = 2* and *travelClass = Business* means that two adults would travel by business class):
 
 ```objc
 searchInfo.adults = 2;
 searchInfo.travelClass = JRSDKTravelClassBusiness;
 ```
-Set travel dates and airports (using our airportsStorage from SDK):
+Set travel dates and airports (using airports storage from SDK):
 
 ```objc
 JRSDKConfigurableTravelSegment *firstTravelSegment = [[JRSDKConfigurableSearchInfo alloc] init];
@@ -63,23 +63,23 @@ searchInfo.travelSegments = [NSOrderedSet orderedSetWithObject:firstTravelSegmen
 That's it. Search info is ready for search.
 
 ####Perform search request
-To perform search request you need to receive ```SearchPerformer``` from SDK and send search info to it. **Don't forget to store** received performer somewhere during search process.
+To perform search request use ```SearchPerformer``` received from SDK and send search info to it. **Don't forget to store** this performer somewhere during search process.
 
 ```objc
 JRSDKSearchPerformer *searchPerformer = [[AviasalesSDK sharedInstance] createSearchPerformer];
 ```
-To retrive final search results and temporary live search results during the search, we ask you to set delegate (```JRSDKSearchPerformerDelegate```) for this search performer:
+To retrive live and final search results set delegate (```JRSDKSearchPerformerDelegate```) to this search performer:
 
 ```objc
 searchPerformer.delegate = self;
 ```
 This delegate requires to implement three methods:
-First one needed to receive live search results;
+first one needed to receive live search results
 
 ```objc
 - (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishRegularSearch:(id<JRSDKSearchInfo>)searchInfo withResult:(id<JRSDKSearchResult>)result;
 ```
-Second one needed to receive error if it is occured during the search;
+Second needed to receive error if it is occured during the search
 
 ```objc
 - (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFailSearchWithError:(NSError *)error connection:(JRServerAPIConnection *)connection;
@@ -106,8 +106,8 @@ Property                  | Desciption
 ```searchTickets```       | tickets that found between cities (metropolitan areas) that is near to requested airports
 
 ### <a name="ticket-purchase-anchor"></a>💸 Tickets purchase
-```AviasalesSDKPurchasePerformer``` object used to perform ticket purchase. Each ticket contains different prices, you should use one of them as input parameter.
-Create performer using price and searchId that returned with search result.
+```AviasalesSDKPurchasePerformer``` is object used to perform ticket purchase. Each ticket contains different prices, you should use one of them as input parameter.
+Create performer using price and searchId that was returned with search result.
 
 ```objc
 - (instancetype)initWithPrice:(id <JRSDKPrice>)price
@@ -118,7 +118,7 @@ and start purchase using method
 ```objc
 - (void)performWithDelegate:(id <AviasalesSDKPurchasePerformerDelegate>)delegate;
 ```
-Open web browser with link that would be received to delegate to provide user purchase form.
+Open link received by delegate in browser to provide user purchase form.
 
 ### 📺 Advertisement
 Aviasales SDK lets you generate additional revenue by displaying advertisement to your users.

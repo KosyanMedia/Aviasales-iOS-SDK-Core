@@ -1,24 +1,32 @@
 //
-//  NumberUtil.h
-//  aviasales
+//  AviasalesNumberUtil.h
 //
-//  Created by Nikita Kabardin on 10/9/11.
-//  Copyright (c) 2011 Cleverpumpkin. All rights reserved.
+//  Copyright 2016 Go Travel Un Limited
+//  This code is distributed under the terms and conditions of the MIT license.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface AviasalesNumberUtil : NSObject
 
-+ (NSNumber *)stringToNumber:(NSString*)string;
-+ (NSString *)choosePluralForNumber:(NSInteger)num from:(NSString*)one andFrom:(NSString*)two andFrom:(NSString*)three;
-+ (NSNumber *)numberFromInstance:(id)instance positive:(BOOL)positive;
-
+/**
+ *  Converts price value from source currency to target currency
+ *
+ *  @param price    Price value in source currency
+ *  @param fromCode Source currency
+ *  @param toCode   Target currency
+ *
+ *  @return Converted price value
+ */
 + (NSNumber *)convertPrice:(NSNumber *)price fromCurrency:(JRSDKCurrency)fromCode to:(JRSDKCurrency)toCode;
-+ (NSString *)formatPrice:(NSNumber *)price;
 
-+ (NSCalendar*)sharedCalendar;
-+ (NSInteger)timeInMinutesOfDate:(NSDate *)date;
-+ (void)updateCurrencyCode:(JRSDKCurrency)currencyCode;
+/**
+ *  Formats price value with currency symbol of selected currency in `AviasalesSDK`
+ *
+ *  @param price Price value to format
+ *
+ *  @return Formatted price
+ */
++ (NSString *)formatPrice:(NSNumber *)price;
 
 @end

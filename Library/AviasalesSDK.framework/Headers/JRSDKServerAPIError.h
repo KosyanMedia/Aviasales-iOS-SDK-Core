@@ -1,9 +1,8 @@
 //
 //  JRSDKServerAPIError.h
-//  AviasalesSDK
 //
-//  Created by Dmitry Ryumin on 11/07/16.
-//  Copyright © 2016 aviasales. All rights reserved.
+//  Copyright 2016 Go Travel Un Limited
+//  This code is distributed under the terms and conditions of the MIT license.
 //
 
 #ifndef JRSDKServerAPIError_h

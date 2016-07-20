@@ -1,3 +1,10 @@
+//
+//  JRSDKGate.h
+//
+//  Copyright 2016 Go Travel Un Limited
+//  This code is distributed under the terms and conditions of the MIT license.
+//
+
 #if !TARGET_OS_WATCH
 #import <AviasalesSDK/DataDefines.h>
 #else
@@ -8,30 +15,43 @@
 
 @protocol JRSDKGate <NSObject>
 /**
- * Average gate rating (float from 0 upto 5)
+ *  Average gate rating (float from 0 up to 5)
  */
 @property (nonatomic, retain, readonly) NSNumber *averageRate;
 
 /**
- Код валюты гейта трёхбуквенный код валюты (например: rub, usd, eur)
+ *  Gate currency code
  */
 @property (nonatomic, retain, readonly) JRSDKCurrency currencyCode;
 
 /**
- * Gate identifier
+ *  Gate identifier
  */
 @property (nonatomic, retain, readonly) NSString *gateID;
 
 /**
- * Gate name
+ *  Gate name
  */
 @property (nonatomic, strong, readonly) NSString *label;
+
 /**
- * Gate website optimized for mobile
+ *  Gate website is optimized for mobile devices
  */
 @property (nonatomic, assign, readonly) BOOL isMobileVersion;
+
+/**
+ *  Possible payment methods
+ */
 @property (nonatomic, retain, readonly) NSSet <id <JRSDKPaymentMethod>> *paymentMethods;
+
+/**
+ *  Gate rating
+ */
 @property (nonatomic, strong, readonly) NSNumber *productivity;
+
+/**
+ *  Gate is the website of an airline
+ */
 @property (nonatomic, retain, readonly) NSNumber *isAirline;
 
 @end

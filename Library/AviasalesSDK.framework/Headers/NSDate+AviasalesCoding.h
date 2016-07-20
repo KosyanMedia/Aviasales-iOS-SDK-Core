@@ -1,14 +1,28 @@
 //
 //  NSDate+AviasalesCoding.h
-//  Pods
 //
-//  Created by Denis Chaschin on 30.03.16.
-//
+//  Copyright 2016 Go Travel Un Limited
+//  This code is distributed under the terms and conditions of the MIT license.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface NSDate(AviasalesCoding)
+
+/**
+ *  Calculates current date in %d%m format
+ *
+ *  @return Date in %d%m format 
+ */
 - (NSString *)aviasales_fastDayMonthString;
+
+/**
+ *  Creates `NSDate` instance from %d%m string
+ *
+ *  @param string String with %d%m date format
+ *
+ *  @return Parsed date
+ */
 + (NSDate *)aviasales_dateWithDayMonthString:(NSString *)string;
+
 @end

@@ -1,9 +1,8 @@
 //
 //  DataDefines.h
-//  AviasalesSDK
 //
-//  Created by Denis Chaschin on 29.04.16.
-//  Copyright © 2016 aviasales. All rights reserved.
+//  Copyright 2016 Go Travel Un Limited
+//  This code is distributed under the terms and conditions of the MIT license.
 //
 
 #ifndef DataDefines_h

@@ -1,3 +1,10 @@
+//
+//  JRSDKAirport.h
+//
+//  Copyright 2016 Go Travel Un Limited
+//  This code is distributed under the terms and conditions of the MIT license.
+//
+
 #import <MapKit/MapKit.h>
 #if !TARGET_OS_WATCH
 #import <AviasalesSDK/DataDefines.h>
@@ -8,59 +15,96 @@
 #ifndef JRSDKAirport_h
 #define JRSDKAirport_h
 
+/**
+ *  All possible airport types
+ */
 typedef NS_ENUM(NSUInteger, JRSDKAirportType) {
+    /**
+     *  Airport
+     */
     JRSDKAirportTypeAirport = 0,
+    /**
+     *  Railway station
+     */
     JRSDKAirportTypeRailwayStation
 };
 
 @protocol JRSDKAirport <NSObject>
 
 /**
- Средний рейтинг аэропорта (число типа float от 0 до 5)
+ * Average airline rating (float from 0 to 5)
  */
 @property (nonatomic, retain, readonly) NSNumber *averageRate;
+
 /**
- Город
+ *  City
  */
 @property (nonatomic, retain, readonly) NSString *city;
 @property (nonatomic, retain, readonly) NSString *cityNameCasePr;
 @property (nonatomic, retain, readonly) NSString *cityNameCaseRo;
 @property (nonatomic, retain, readonly) NSString *cityNameCaseVi;
+
 /**
- Страна
+ *  Country
  */
 @property (nonatomic, retain, readonly) NSString *country;
 
 /**
- Трехбуквенный IATA-код аэропорта
+ *  Airport IATA
  */
-@property (nonatomic, retain, readonly) JRSDKIATA iata;
-@property (nonatomic, retain, readonly) JRSDKIATA parentIata;
+@property (nonatomic, strong, readonly) JRSDKIATA iata;
+
 /**
- Координаты аэропорта
+ *  Parent IATA (e.g. for VKO airport there is MOW parent IATA)
+ */
+@property (nonatomic, retain, readonly) JRSDKIATA parentIata;
+
+/**
+ *  Airport coordinates
  */
 @property (nonatomic, retain, readonly) NSNumber *latitude;
 @property (nonatomic, retain, readonly) NSNumber *longitude;
+
 /**
- Часовой пояс аэропорта
+ *  Airport time zone
  */
 @property (nonatomic, strong, readonly) NSTimeZone *timeZone;
+
 /**
- Название аэропорта, либо строка пустая строка для метрополии
+ *  Airport name
+ *  
+ *  @warning May be empty when object represents a metropolitan area
  */
 @property (nonatomic, retain, readonly) NSString *airportName;
+
 /**
- Отражает популярность аэропорта. Чем больше значение, тем популярнее аэропорт
+ *  Number of searches that represents airport popularity
  */
 @property (nonatomic, assign, readonly) NSInteger numberOfSearches;
-@property (nonatomic, assign, readonly) BOOL isCity;
-@property (nonatomic, assign, readonly) JRSDKAirportType airportType;
+
 /**
- Набор строк, по которым можно найти аэропорт
+ *  Whether object represents a metropolitan area
+ */
+@property (nonatomic, assign, readonly) BOOL isCity;
+
+/**
+ *  Airport type
+ */
+@property (nonatomic, assign, readonly) JRSDKAirportType airportType;
+
+/**
+ *  A list of strings you can search this airport with
  */
 @property (nonatomic, retain, readonly) NSArray <NSString *> *indexStrings;
+
+/**
+ *  Whether the object was received from server
+ */
 @property (nonatomic, assign, readonly) BOOL fromServer;
 
+/**
+ *  Convenient method to get coordinates in different formats
+ */
 - (NSArray *)coordinates;
 - (CLLocationCoordinate2D)CLLCoordinate;
 

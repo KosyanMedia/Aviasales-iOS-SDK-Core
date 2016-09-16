@@ -47,9 +47,6 @@ extern const NSTimeInterval kJRSDKSearchPerformerAverageSearchTime;
  */
 @property(nonatomic) NSUInteger maxTimeoutRetries;
 
-@property (strong, nonatomic) NSString *testSearchJSONName;
-@property (strong, nonatomic) NSString *testMagicSearchJSONName;
-
 @end
 
 /**

@@ -42,4 +42,22 @@
  */
 + (JRSDKIATA)flightSegmentDestinationIATA:(id<JRSDKFlightSegment>)flightSegment;
 
+/**
+ *  Returns flight segment stopover count
+ *
+ *  @param flightSegment Flight segment to calculate stopover count for
+ *
+ *  @return Flight segment stopover count
+ */
++ (NSInteger)flightSegmentStopoverCount:(id<JRSDKFlightSegment>)flightSegment;
+
+/**
+ *  Checks all flight segment flights to include baggage
+ *
+ *  @param flightSegment Flight segment to check baggage for
+ *
+ *  @return `YES` when all flight segment flights have baggage included, `NO` otherwise
+ */
++ (BOOL)flightSegmentHasIncludedBaggage:(id<JRSDKFlightSegment>)flightSegment;
+
 @end

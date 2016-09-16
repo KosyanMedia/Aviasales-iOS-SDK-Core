@@ -53,6 +53,15 @@
 + (id<JRSDKTicket>)ticketWithMinPriceFrom:(NSSet<id<JRSDKTicket>> *)ticketSet;
 
 /**
+ *  Returns ticket with minimal price from tickets set
+ *
+ *  @param ticketSet A ordered by price set of tickets
+ *
+ *  @return A ticket with minimal price
+ */
++ (id<JRSDKTicket>)ticketWithMinPriceFromOrderedSet:(NSOrderedSet<id<JRSDKTicket>> *)ticketsOrderedSet;
+
+/**
  *  Compares two tickets
  *
  *  @param firstTicket  First ticket

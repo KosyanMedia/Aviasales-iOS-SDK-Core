@@ -59,4 +59,9 @@
  */
 @property (nonatomic, retain, readonly) id <JRSDKAirport> destinationAirport;
 
+/**
+ *  Baggage rule
+ */
+@property (nonatomic, retain, readonly) id <JRSDKBaggageRule> baggageRule;
+
 @end

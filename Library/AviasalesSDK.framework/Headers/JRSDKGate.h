@@ -54,4 +54,9 @@
  */
 @property (nonatomic, retain, readonly) NSNumber *isAirline;
 
+/**
+ *  Gate supports assisted booking
+ */
+@property (nonatomic, retain, readonly) NSNumber *supportsAssistedBooking;
+
 @end

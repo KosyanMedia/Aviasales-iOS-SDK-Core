@@ -48,6 +48,7 @@ FOUNDATION_EXPORT const unsigned char AviasalesSDKVersionString[];
 #import <AviasalesSDK/JRSDKAirport+Utils.h>
 #import <AviasalesSDK/JRSDKTravelSegment+Utils.h>
 #import <AviasalesSDK/JRSDKCurrency+Utils.h>
+#import <AviasalesSDK/JRSDKBaggageRule+Utils.h>
 #import <AviasalesSDK/AviasalesNumberUtil.h>
 #import <AviasalesSDK/NSDate+AviasalesCoding.h>
 
@@ -68,6 +69,7 @@ FOUNDATION_EXPORT const unsigned char AviasalesSDKVersionString[];
 #import <AviasalesSDK/JRSDKSearchResult.h>
 #import <AviasalesSDK/JRSDKTicket.h>
 #import <AviasalesSDK/JRSDKTravelSegment.h>
+#import <AviasalesSDK/JRSDKBaggageRule.h>
 
 /**
  *  Model implementation headers

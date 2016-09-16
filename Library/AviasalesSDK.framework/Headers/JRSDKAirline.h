@@ -11,7 +11,7 @@
 #import <AviasalesWatchSDK/DataDefines.h>
 #endif
 
-@protocol JRSDKAlliance;
+@protocol JRSDKAlliance, JRSDKBaggageRule;
 @protocol JRSDKAirline <NSObject>
 
 /**
@@ -38,5 +38,10 @@
  *  Airline alliance
  */
 @property (nonatomic, retain, readonly) id <JRSDKAlliance> alliance;
+
+/**
+ *  Common baggage rule for flights of this airline
+ */
+@property (nonatomic, retain, readonly) id <JRSDKBaggageRule> commonBaggageRule;
 
 @end

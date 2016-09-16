@@ -11,7 +11,7 @@ As an example, you are welcome to use our Template Project from [Aviasales-iOS-S
 The easiest way is to use [CocoaPods](http://cocoapods.org). It takes care of all required frameworks and third party dependencies:
 
 ```ruby
-pod 'AviasalesSDK', '~> 1.3.3-beta6'
+pod 'AviasalesSDK', '~> 2.0.0'
 ```
 
 We recommend to import ```AviasalesSDK.h``` in each file where you use objects or protocols from SDK.

@@ -30,6 +30,12 @@
 @property (nonatomic, retain, readonly) NSString *gateID;
 
 /**
+ *  Main gate identifier (gate itself is the same but a part of prices is provided by the subgate for some reason)
+ *  Currently only 1-level inheritance is supported (main gate and it's subgates)
+ */
+@property (nonatomic, retain, readonly) NSString *mainGateID;
+
+/**
  *  Gate name
  */
 @property (nonatomic, strong, readonly) NSString *label;

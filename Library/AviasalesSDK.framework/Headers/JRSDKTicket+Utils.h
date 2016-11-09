@@ -55,7 +55,7 @@
 /**
  *  Returns ticket with minimal price from tickets set
  *
- *  @param ticketSet A ordered by price set of tickets
+ *  @param ticketsOrderedSet A ordered by price set of tickets
  *
  *  @return A ticket with minimal price
  */

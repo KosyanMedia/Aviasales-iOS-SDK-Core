@@ -65,4 +65,14 @@
  */
 @property (nonatomic, retain, readonly) NSNumber *supportsAssistedBooking;
 
+/**
+ *  Indicates that we can show an extra step during ticket purchase
+ */
+@property (nonatomic, assign, readonly) BOOL jetradarOTAExtraStepEnabled;
+
+/**
+ *  Whether the gate should include to search results
+ */
+@property (nonatomic, assign, readonly) BOOL hidden;
+
 @end

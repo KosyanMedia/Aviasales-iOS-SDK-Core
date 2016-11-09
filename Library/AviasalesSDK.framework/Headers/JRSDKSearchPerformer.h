@@ -32,7 +32,7 @@ extern const NSTimeInterval kJRSDKSearchPerformerAverageSearchTime;
  *  Starts search routine for the passed `searchInfo`
  *
  *  @param searchInfo  Parameters of the search
- *  @param knowEnglish Flag that makes search results contain agencies with English websites
+ *  @param includeResultsInEnglish Flag that makes search results contain agencies with English websites
  */
 - (void)performSearchWithSearchInfo:(id<JRSDKSearchInfo>)searchInfo
             includeResultsInEnglish:(BOOL)includeResultsInEnglish;

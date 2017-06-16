@@ -29,6 +29,7 @@ typedef NS_ENUM(NSUInteger, JRSDKSearchInfoType) {
 };
 
 @interface JRSDKModelUtils(JRSDKSearchInfo)
+
 /**
  *  Calculates search info type
  *
@@ -36,15 +37,16 @@ typedef NS_ENUM(NSUInteger, JRSDKSearchInfoType) {
  *
  *  @return The resulting type
  */
-+ (JRSDKSearchInfoType)searchInfoType:(id<JRSDKSearchInfo>)searchInfo;
++ (JRSDKSearchInfoType)searchInfoType:(JRSDKSearchInfo *)searchInfo;
 
 /**
  *  Convenient methods to check search info to be of certain type
  */
-+ (BOOL)searchInfoIsDirectReturnFlight:(id<JRSDKSearchInfo>)searchInfo;
-+ (BOOL)isSimpleSearch:(id<JRSDKSearchInfo>)searchInfo;
-+ (BOOL)searchInfoIsComplex:(id<JRSDKSearchInfo>)searchInfo;
-+ (BOOL)isSearchInfoComplexOpenJawSearch:(id<JRSDKSearchInfo>)searchInfo;
++ (BOOL)travelSegmentsSetIsDirectReturnFlight:(NSOrderedSet<JRSDKTravelSegment *> *)travelSegments;
++ (BOOL)searchInfoIsDirectReturnFlight:(JRSDKSearchInfo *)searchInfo;
++ (BOOL)isSimpleSearch:(JRSDKSearchInfo *)searchInfo;
++ (BOOL)searchInfoIsComplex:(JRSDKSearchInfo *)searchInfo;
++ (BOOL)isSearchInfoComplexOpenJawSearch:(JRSDKSearchInfo *)searchInfo;
 
 /**
  *  Calculates total number of passengers
@@ -53,16 +55,9 @@ typedef NS_ENUM(NSUInteger, JRSDKSearchInfoType) {
  *
  *  @return Total number of passengers
  */
-+ (NSInteger)searchInfoNumberOfPassengers:(id<JRSDKSearchInfo>)searchInfo;
++ (NSInteger)searchInfoNumberOfPassengers:(JRSDKSearchInfo *)searchInfo;
 
-/**
- *  Copies a source search info into new object to perform a search
- *
- *  @param src Search info to copy
- *
- *  @return New search info
- */
-+ (id<JRSDKSearchInfo>)copySearchInfoForSearch:(id<JRSDKSearchInfo>)src;
++ (BOOL)searchInfoIsValidForSearch:(JRSDKSearchInfo *)searchInfo;
 
 @end
 

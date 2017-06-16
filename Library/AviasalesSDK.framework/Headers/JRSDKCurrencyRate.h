@@ -5,16 +5,22 @@
 //  This code is distributed under the terms and conditions of the MIT license.
 //
 
-@protocol JRSDKCurrencyRate
+#if !TARGET_OS_WATCH
+#import <AviasalesSDK/JRSDKModelObject.h>
+#else
+#import <AviasalesWatchSDK/JRSDKModelObject.h>
+#endif
+
+@interface JRSDKCurrencyRate : JRSDKModelObject
 
 /**
  *  Currency code
  */
-@property (nonatomic, retain, readonly) JRSDKCurrency code;
+@property (nonatomic, retain, nonnull) JRSDKCurrency code;
 
 /**
  *  Currency rate
  */
-@property (nonatomic, retain, readonly) NSNumber *rate;
+@property (nonatomic, retain, nonnull) NSNumber *rate;
 
 @end

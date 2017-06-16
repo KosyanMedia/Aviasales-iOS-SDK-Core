@@ -11,7 +11,7 @@
 #import <AviasalesWatchSDK/JRSDKModelUtils.h>
 #endif
 
-@protocol JRSDKFlightSegment;
+@class JRSDKFlightSegment;
 
 @interface JRSDKModelUtils(JRSDKFlightSegment)
 
@@ -22,7 +22,7 @@
  *
  *  @return `YES` when flight segment is a direct flight segment, `NO` otherwise
  */
-+ (BOOL)isDirectFlightSegment:(id<JRSDKFlightSegment>)flightSegment;
++ (BOOL)isDirectFlightSegment:(JRSDKFlightSegment *)flightSegment;
 
 /**
  *  Returns origin IATA for flight segment
@@ -31,7 +31,7 @@
  *
  *  @return Origin IATA
  */
-+ (JRSDKIATA)flightSegmentOriginIATA:(id<JRSDKFlightSegment>)flightSegment;
++ (JRSDKIATA)flightSegmentOriginIATA:(JRSDKFlightSegment *)flightSegment;
 
 /**
  *  Returns destination IATA for flight segment
@@ -40,7 +40,7 @@
  *
  *  @return Destination IATA
  */
-+ (JRSDKIATA)flightSegmentDestinationIATA:(id<JRSDKFlightSegment>)flightSegment;
++ (JRSDKIATA)flightSegmentDestinationIATA:(JRSDKFlightSegment *)flightSegment;
 
 /**
  *  Returns flight segment stopover count
@@ -49,15 +49,15 @@
  *
  *  @return Flight segment stopover count
  */
-+ (NSInteger)flightSegmentStopoverCount:(id<JRSDKFlightSegment>)flightSegment;
++ (NSInteger)flightSegmentStopoverCount:(JRSDKFlightSegment *)flightSegment;
 
 /**
- *  Checks all flight segment flights to include baggage
+ * Returns departure date of first flight in flight segment
  *
- *  @param flightSegment Flight segment to check baggage for
+ * @param flightSegment Flight segment calculate departure date
  *
- *  @return `YES` when all flight segment flights have baggage included, `NO` otherwise
+ * @return Departure date of flight segment
  */
-+ (BOOL)flightSegmentHasIncludedBaggage:(id<JRSDKFlightSegment>)flightSegment;
++ (NSDate *)flightSegmentDepartureDate:(JRSDKFlightSegment *)flightSegment;
 
 @end

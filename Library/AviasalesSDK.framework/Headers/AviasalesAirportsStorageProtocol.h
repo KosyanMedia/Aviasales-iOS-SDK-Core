@@ -11,8 +11,10 @@
 #import <AviasalesWatchSDK/DataDefines.h>
 #endif
 
-@protocol JRSDKAirport;
+@class JRSDKAirport;
 @protocol AviasalesAirportsDataProtocol;
+
+@class JRSDKCountry;
 
 /**
  *  Notification with this name is posted via NSNotificationCenter when new airports appear in airports storage
@@ -22,32 +24,47 @@ FOUNDATION_EXPORT NSString *const kAviasalesAirportsStorageNewAirportsParsedNoti
 /**
  *  Storage provides convenient methods to save and fetch airports
  */
-@protocol AviasalesAirportsStorageProtocol <NSObject>
 
-/**
- *  A list of best airports overall
- */
-- (NSArray <id <JRSDKAirport>> *)topAirports;
+// TODO: Need rename to AviasalesLocationsStorageProtocol in future
+@protocol AviasalesAirportsStorageProtocol <NSObject>
 
 /**
  *  A full list of airports
  */
-- (NSArray <id <JRSDKAirport>> *)allAirports;
+- (NSArray <JRSDKAirport *> *)airports;
+
+/**
+ *  A full list of countries
+ */
+- (NSArray <JRSDKCountry *> *)countries;
+
+/**
+ *  Get top cities by country
+ *  @param country `JRSDKCountry` to find airports for
+ */
+- (NSArray <JRSDKAirport *> *)citiesByCountry:(JRSDKCountry *)country;
 
 /**
  *  Convenient methods to fetch/save airports by IATA
  */
-- (id <JRSDKAirport>)findAirportByIATA:(JRSDKIATA)iata city:(BOOL)isCity;
-- (id <JRSDKAirport>)findTopAirportByIATA:(JRSDKIATA)iata city:(BOOL)isCity;
-- (id <JRSDKAirport>)findOrCreateAirportByIATA:(JRSDKIATA)iata city:(BOOL)isCity;
-- (id <JRSDKAirport>)findAnythingByIATA:(JRSDKIATA)iata;
+- (JRSDKAirport *)findAirportByIATA:(JRSDKIATA)iata city:(BOOL)isCity;
+- (JRSDKAirport *)findOrCreateAirportByIATA:(JRSDKIATA)iata city:(BOOL)isCity;
+- (JRSDKAirport *)findAnythingByIATA:(JRSDKIATA)iata;
+- (NSArray <JRSDKAirport *> *)findAllAirportsByIATA:(JRSDKIATA)IATA;
 
 /**
  *  Saves airports list to storage
  *
- *  @param airports `NSArray` with `id <JRSDKAirport>`
+ *  @param airports `NSArray` with `JRSDKAirport`
  */
-- (void)storeAirports:(NSArray <id <JRSDKAirport>> *)airports;
+- (void)storeAirports:(NSArray <JRSDKAirport *> *)airports;
+
+/**
+ *  Saves countries list to storage
+ *
+ *  @param countries `NSArray` with JRSDKCountry
+ */
+- (void)storeCountries:(NSArray <JRSDKCountry *> *)countries;
 
 /**
  *  Finds main IATA for the passed IATA. For example the main IATA for `VKO` (Moscow, Vnukovo) IATA is `MOW` (Moscow, all airports)
@@ -57,5 +74,14 @@ FOUNDATION_EXPORT NSString *const kAviasalesAirportsStorageNewAirportsParsedNoti
  *  @return Main IATA for the passed IATA or the passed IATA itself if the IATA is already main IATA or there is no main IATA at all
  */
 - (JRSDKIATA)mainIATAByIATA:(JRSDKIATA)iata;
+
+/**
+ *  Finds main city for the passed airport.
+ *
+ *  @param airport to find main city for
+ *
+ *  @return Main city or self
+ */
+- (JRSDKAirport *)cityOrSelfByAirport:(JRSDKAirport *)airport;
 
 @end

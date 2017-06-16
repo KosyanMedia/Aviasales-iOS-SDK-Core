@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "DataDefines.h"
 
-@protocol JRSDKSearchInfo, JRSDKTicket, JRSDKSearchResult;
+@class JRSDKSearchInfo, JRSDKTicket, JRSDKSearchResult;
 @protocol JRSDKSearchPerformerDelegate;
 
 /**
@@ -34,7 +34,7 @@ extern const NSTimeInterval kJRSDKSearchPerformerAverageSearchTime;
  *  @param searchInfo  Parameters of the search
  *  @param includeResultsInEnglish Flag that makes search results contain agencies with English websites
  */
-- (void)performSearchWithSearchInfo:(id<JRSDKSearchInfo>)searchInfo
+- (void)performSearchWithSearchInfo:(JRSDKSearchInfo *)searchInfo
             includeResultsInEnglish:(BOOL)includeResultsInEnglish;
 
 /**
@@ -50,6 +50,21 @@ extern const NSTimeInterval kJRSDKSearchPerformerAverageSearchTime;
 @end
 
 /**
+ * Tickets received from server on each iteration
+ */
+@interface JRSDKSearchResultsChunk: NSObject
+
+/**
+ * Tickets for requested airport or metropolitan area
+ */
+@property (strong, nonatomic) NSSet<JRSDKTicket *> *strictSearchTickets;
+/**
+ * Tickets for the whole metropolitan area that includes requested airport
+ */
+@property (strong, nonatomic) NSSet<JRSDKTicket *> *searchTickets;
+@end
+
+/**
  *  `JRSDKSearchPerformer` delegate should conform to this protocol
  */
 @protocol JRSDKSearchPerformerDelegate <NSObject>
@@ -57,11 +72,12 @@ extern const NSTimeInterval kJRSDKSearchPerformerAverageSearchTime;
 /**
  *  The method is called when the final search results were obtained
  *
- *  @param searchPerformer Search performer itself
- *  @param searchInfo      Current search parameters
- *  @param result          Search result
+ *  @param searchPerformer    Search performer itself
+ *  @param searchInfo         Current search parameters
+ *  @param result             Search result
+ *  @param metropolitanResult Search result for the whole metropolitan area
  */
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishRegularSearch:(id<JRSDKSearchInfo>)searchInfo withResult:(id<JRSDKSearchResult>)result;
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishRegularSearch:(JRSDKSearchInfo *)searchInfo withResult:(JRSDKSearchResult *)result andMetropolitanResult:(JRSDKSearchResult *)metropolitanResult;
 
 /**
  *  The method is called when the search did fail to finish
@@ -78,17 +94,18 @@ extern const NSTimeInterval kJRSDKSearchPerformerAverageSearchTime;
  *  @param searchInfo      Current search parameters
  *  @param error           An error that occurred (if any)
  */
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinalizeSearchWithInfo:(id<JRSDKSearchInfo>)searchInfo error:(NSError *)error;
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinalizeSearchWithInfo:(JRSDKSearchInfo *)searchInfo error:(NSError *)error;
 
 @optional
 
 /**
  *  The method is called when the search performer received a chunk of data with some tickets
  *
- *  @param searchPerformer Search performer itself
- *  @param searchInfo      Current search parameters
- *  @param temporaryResult Search result that is available at the moment
+ *  @param searchPerformer             Search performer itself
+ *  @param searchInfo                  Current search parameters
+ *  @param temporaryResult             Search result that is available at the moment
+ *  @param temporaryMetropolitanResult Search result for the whole metropolitan area that is available at the moment
  */
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFindSomeTicketsInSearchInfo:(id<JRSDKSearchInfo>)searchInfo temporaryResult:(id<JRSDKSearchResult>)temporaryResult;
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFindSomeTickets:(JRSDKSearchResultsChunk *)newTickets inSearchInfo:(JRSDKSearchInfo *)searchInfo temporaryResult:(JRSDKSearchResult *)temporaryResult temporaryMetropolitanResult:(JRSDKSearchResult *)temporaryMetropolitanResult;
 
 @end

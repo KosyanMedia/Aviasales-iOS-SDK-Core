@@ -5,39 +5,45 @@
 //  This code is distributed under the terms and conditions of the MIT license.
 //
 
-@protocol JRSDKAirline, JRSDKFlightSegment, JRSDKPrice, JRSDKSearchInfo;
+#if !TARGET_OS_WATCH
+#import <AviasalesSDK/JRSDKModelObject.h>
+#else
+#import <AviasalesWatchSDK/JRSDKModelObject.h>
+#endif
 
-@protocol JRSDKTicket <NSObject>
+@class JRSDKAirline, JRSDKFlightSegment, JRSDKProposal, JRSDKSearchResultInfo;
+
+@interface JRSDKTicket : JRSDKModelObject
 
 /**
  *  Flight segments for this ticket
  */
-@property (nonatomic, retain, readonly) NSOrderedSet <id <JRSDKFlightSegment>> *flightSegments;
+@property (nonatomic, strong, nonnull) NSOrderedSet <JRSDKFlightSegment *> *flightSegments;
 
 /**
  *  Prices (sorted by price value)
  */
-@property (nonatomic, strong, readonly) NSOrderedSet <id <JRSDKPrice>> *prices;
+@property (nonatomic, strong, nonnull) NSOrderedSet <JRSDKProposal *> *proposals;
 
 /**
  *  Main airline (airline that performs the most flights)
  */
-@property (nonatomic, retain, readonly) id <JRSDKAirline> mainAirline;
+@property (nonatomic, strong, nonnull, readonly) JRSDKAirline *mainAirline;
 
 /**
  *  Ticket rating
  */
-@property (nonatomic, retain, readonly) NSNumber *simpleRating;
+@property (nonatomic, strong, nonnull, readonly) NSNumber *simpleRating;
 
 /**
  *  All flights duration
  */
-@property (nonatomic, retain, readonly) NSNumber *totalDuration;
+@property (nonatomic, strong, nonnull, readonly) NSNumber *totalDuration;
 
 /**
  *  All transfers duration
  */
-@property (nonatomic, retain, readonly) NSNumber *delayDuration;
+@property (nonatomic, strong, nonnull, readonly) NSNumber *delayDuration;
 
 /**
  *  This ticket's flight segments has overnight stopovers
@@ -47,16 +53,21 @@
 /**
  *  Ticket sign that is unique for each ticket in the search
  */
-@property (nonatomic, retain, readonly) NSString *sign;
+@property (nonatomic, strong, nonnull) NSString *sign;
 
 /**
  *  Ticket has reliable information because was received from trusted gate
  */
-@property (nonatomic, assign, readonly) BOOL isFromTrustedGate;
+@property (nonatomic, assign) BOOL isFromTrustedGate;
 
 /**
- *  Search info that was used to find this ticket
+ *  This is a charter ticket
  */
-- (id <JRSDKSearchInfo>)searchInfo;
+@property (nonatomic, assign) BOOL isCharter;
+
+/**
+ *  Search result info, where this ticket is
+ */
+@property (nonatomic, strong, nonnull) JRSDKSearchResultInfo *searchResultInfo;
 
 @end

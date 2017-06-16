@@ -5,7 +5,13 @@
 //  This code is distributed under the terms and conditions of the MIT license.
 //
 
-@protocol JRSDKTravelSegment, JRSDKTicket, JRSDKSearchResult;
+#if !TARGET_OS_WATCH
+#import <AviasalesSDK/JRSDKModelObject.h>
+#else
+#import <AviasalesWatchSDK/JRSDKModelObject.h>
+#endif
+
+@class JRSDKTravelSegment, JRSDKTicket, JRSDKSearchResult;
 
 /**
  *  Travel class
@@ -17,36 +23,36 @@ typedef NS_ENUM(NSInteger, JRSDKTravelClass) {
     JRSDKTravelClassFirst = 3
 };
 
-@protocol JRSDKSearchInfo <NSObject>
+@interface JRSDKSearchInfo : JRSDKModelObject
 
 /**
  *  Travel class
  */
-@property (nonatomic, assign, readonly) JRSDKTravelClass travelClass;
+@property (nonatomic, assign) JRSDKTravelClass travelClass;
 
 /**
  *  Number of adults
  */
-@property (nonatomic, assign, readonly) NSInteger adults;
+@property (nonatomic, assign) NSUInteger adults;
 
 /**
  *  Number of children
  */
-@property (nonatomic, assign, readonly) NSInteger children;
+@property (nonatomic, assign) NSUInteger children;
 
 /**
  *  Number of infants
  */
-@property (nonatomic, assign, readonly) NSInteger infants;
+@property (nonatomic, assign) NSUInteger infants;
 
 /**
  *  Travel segments to search
  */
-@property (nonatomic, retain, readonly) NSOrderedSet <id <JRSDKTravelSegment>> *travelSegments;
+@property (nonatomic, strong, nonnull) NSOrderedSet <JRSDKTravelSegment *> *travelSegments;
 
 /**
- *  Search result that becomes present after `JRSDKSearchPerformer` routines
+ * Save ticket sign here to search
  */
-@property (nonatomic, strong, readonly) id<JRSDKSearchResult> searchResult;
+@property (nonatomic, strong, nullable) NSString *ticketSignToSearch;
 
 @end

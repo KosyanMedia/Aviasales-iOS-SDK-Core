@@ -69,7 +69,7 @@ JRSDKSearchInfo *searchInfo = [searchInfoBuilder build];
 
 That's it. Search info is ready for search.
 
-####Perform search request
+#### Perform search request
 To perform search request use ```SearchPerformer``` received from the SDK and send search info to it. **Don't forget to store** this performer somewhere during the search process.
 
 ```objc
@@ -110,7 +110,7 @@ Start search performing:
                              includeResultsInEnglish:YES];
 ```
 
-####Parsing search result
+#### Parsing search result
 
 Search results are received as ```JRSDKSearchResult``` objects. If a search is started with a specific airport as a parameter, ```result``` и ```metropolitanResult``` will be different — tha last one will contain tickets to any airport of the given city.
 

@@ -58,8 +58,15 @@ travelSegmentBuilder.destinationAirport = [[AviasalesSDK sharedInstance].airport
 Сохраним созданный перелет в параметры поиска:
 
 ```objc
-searchInfo.travelSegments = [NSOrderedSet orderedSetWithObject:[travelSegmentBuilder build]];
+searchInfoBuilder.travelSegments = [NSOrderedSet orderedSetWithObject:[travelSegmentBuilder build]];
 ```
+
+Теперь можно собрать объект `JRSDKSearchInfo` для дальнейшего использования:
+
+```objc
+JRSDKSearchInfo *searchInfo = [searchInfoBuilder build];
+```
+
 Вот и всё. Параметры поиска готовы. Можем запускать поиск авиабилетов.
 
 #### Выполнение поискового запроса

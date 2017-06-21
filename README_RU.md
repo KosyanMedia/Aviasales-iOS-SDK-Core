@@ -11,7 +11,7 @@
 Самый простой способ добавления AviasalesSDK в проект - с использованием [CocoaPods](http://cocoapods.org).:
 
 ```ruby
-pod 'AviasalesSDK', '~> 2.0.0'
+pod 'AviasalesSDK'
 ```
 
 Мы рекомендуем импортировать ```AviasalesSDK.h``` в каждом файле, где вы пользуетесь объектами или протоколами из SDK.
@@ -33,32 +33,32 @@ AviasalesSDKInitialConfiguration *configuration = [AviasalesSDKInitialConfigurat
 
 ## Основные части SDK
 ### ✈️ Поиск билетов на самолеты
-Задайте параметры поиска, используя любой объект, удовлетворяющий протоколу ```JRSDKSearchInfo```. Вы можете реализовать объект сами, как вам будет удобно или воспользоваться существующим ```JRSDKConfigurableSearchInfo```. Посмотрите пример ниже, чтобы лучше понять, как задавать параметры.
+Задайте параметры поиска, используя объект класса ```JRSDKSearchInfoBuilder```. Посмотрите пример ниже, чтобы лучше понять, как задавать параметры.
 
-#### Задание парамтеров поиска
+#### Задание параметров поиска
 Создадим простой объект, описывающий новый поиск:
 
 ```objc
-JRSDKConfigurableSearchInfo *searchInfo = [[JRSDKConfigurableSearchInfo alloc] init];
+JRSDKConfigurableSearchInfo *searchInfoBuilder = [[JRSDKSearchInfoBuilder alloc] init];
 ```
 Установим желаемые параметры поиска (например *adults = 2* и *travelClass = Business* значит, что двое взрослых людей полетят бизнес классом).
 
 ```objc
-searchInfo.adults = 2;
-searchInfo.travelClass = JRSDKTravelClassBusiness;
+searchInfoBuilder.adults = 2;
+searchInfoBuilder.travelClass = JRSDKTravelClassBusiness;
 ```
 Зададим даты перелетов и аэропорты вылетов (их можно задать много, просто повторив следующий шаг несколько раз):
 
 ```objc
-JRSDKConfigurableTravelSegment *firstTravelSegment = [[JRSDKConfigurableTravelSegment alloc] init];
-firstTravelSegment.departureDate = [NSDate date];
-firstTravelSegment.originAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"LED"];
-firstTravelSegment.destinationAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"MOW"];
+JRSDKTravelSegmentBuilder *travelSegmentBuilder = [JRSDKTravelSegmentBuilder new]
+travelSegmentBuilder.departureDate = [NSDate date];
+travelSegmentBuilder.originAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"LED"];
+travelSegmentBuilder.destinationAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"MOW"];
 ```
 Сохраним созданный перелет в параметры поиска:
 
 ```objc
-searchInfo.travelSegments = [NSOrderedSet orderedSetWithObject:firstTravelSegment];
+searchInfo.travelSegments = [NSOrderedSet orderedSetWithObject:[travelSegmentBuilder build]];
 ```
 Вот и всё. Параметры поиска готовы. Можем запускать поиск авиабилетов.
 
@@ -75,20 +75,26 @@ searchPerformer.delegate = self;
 ```
 Этот объект должен реализовать три метода:
 
-Первый метод для того, чтобы получать результаты живой выдачи (вы можете сразу отображать их пользователю, если хотите)
+Первый метод вызовется, когда основные результаты поиска будут готовы для отображения (после этого вызова SDK будет продолжать ждать от сервера данные, и, **в очень редком случае**, может получить дополнительные более дешёвые билеты):
 
 ```objc
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishRegularSearch:(id<JRSDKSearchInfo>)searchInfo withResult:(id<JRSDKSearchResult>)result;
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishRegularSearch:(JRSDKSearchInfo *)searchInfo withResult:(JRSDKSearchResult *)result andMetropolitanResult:(JRSDKSearchResult *)metropolitanResult;
 ```
-Второй метод, чтобы получить ошибку, если она вдруг возникнет в процессе поиска (например, может отключиться интернет)
+Второй метод, чтобы получить ошибку, если она вдруг возникнет в процессе поиска (например, может отключиться интернет):
 
 ```objc
 - (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFailSearchWithError:(NSError *)error connection:(JRServerAPIConnection *)connection;
 ```
-И третий метод нужен, чтобы понять, когда поиск завершится и больше не будет новых результатов. После вызова этого метода, вы можете удалить ```SearchPerformer``` из памяти (переиспользовать его не стоит, для следующего поиска создайте новый)
+И третий метод нужен, чтобы понять, когда поиск завершится и больше не будет новых результатов. После вызова этого метода, вы можете удалить ```SearchPerformer``` из памяти (переиспользовать его не стоит, для следующего поиска создайте новый):
 
 ```objc
 - (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinalizeSearchWithInfo:(id<JRSDKSearchInfo>)searchInfo error:(NSError *)error;
+```
+
+Опциональный метод, который вызывается, когда появляется информация о новой пачке билетов (но поиск ещё не завершён):
+
+```objc
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFindSomeTickets:(JRSDKSearchResultsChunk *)newTickets inSearchInfo:(JRSDKSearchInfo *)searchInfo temporaryResult:(JRSDKSearchResult *)temporaryResult temporaryMetropolitanResult:(JRSDKSearchResult *)temporaryMetropolitanResult;
 ```
 
 Теперь, когда все нужные методы у нас есть, запускаем поиск (сразу укажите, включать нам результаты агенств на английском языке в выдачу или нет):
@@ -99,22 +105,15 @@ searchPerformer.delegate = self;
 ```
 
 #### Получение результатов поиска
-Результаты поиска возвращаются с помощью объекта ```id<JRSDKSearchResult>```, содержащего следующие значение:
-
-Параметр                  | Описание
-:------------------------ | :------------------------
-```searchID```            | Этот параметр понадобится при [покупке билетов](#ticket-purchase-anchor)
-```strictSearchTickets``` | Билеты, найденные в точности между **аэропортами**, которые вы просили
-```searchTickets```       | Билеты, найденные между **городами** (metropolitan areas), которые рядом с аэропортами, что вы просили
+Результаты поиска возвращаются с помощью объектов ```JRSDKSearchResult```. В случае, если поиск был совершён с указанием конкретного аэропорта, ```result``` и ```metropolitanResult``` будут отличаться — последний будет содержать билеты в любой аэропорт данного города.
 
 ### <a name="ticket-purchase-anchor"></a>💸 Покупка билетов
-Для покупки билетов будем пользоваться объектом ```AviasalesSDKPurchasePerformer```. Каждый билет содержит много цен от разных агенств, где его можно купить. Вам нужно понять, какая из них вас устраивает и создать ```AviasalesSDKPurchasePerformer``` с желаемой ценой и параметром searchId (полученным в поисковой выдаче) с помощью метода:
+Для покупки билетов будем пользоваться объектом ```AviasalesSDKPurchasePerformer```. Каждый билет содержит много предложений от разных агентств. Вам нужно понять, какое из них вас устраивает и создать ```AviasalesSDKPurchasePerformer``` с желаемым предложением и параметром searchId (```JRSDKSearchResult > JRSDKSearchResultInfo```) с помощью метода:
 
 ```objc
-- (instancetype)initWithPrice:(id <JRSDKPrice>)price
-                     searchId:(NSString *)searchId;
+- (instancetype)initWithProposal:(JRSDKProposal *)proposal searchId:(NSString *)searchId;
 ```
-Запустим процесс поиска:
+Запустим процесс генерации ссылки:
 
 ```objc
 - (void)performWithDelegate:(id <AviasalesSDKPurchasePerformerDelegate>)delegate;

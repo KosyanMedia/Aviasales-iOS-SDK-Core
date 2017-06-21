@@ -11,7 +11,7 @@ As an example, you are welcome to use our Template Project from [Aviasales-iOS-S
 The easiest way is to use [CocoaPods](http://cocoapods.org). It takes care of all required frameworks and third party dependencies:
 
 ```ruby
-pod 'AviasalesSDK', '~> 2.0.0'
+pod 'AviasalesSDK'
 ```
 
 We recommend to import ```AviasalesSDK.h``` in each file where you use objects or protocols from SDK.
@@ -33,33 +33,40 @@ Don't forget to replace two placeholders in this example with the actual values.
 
 ## Features
 ### ✈️ Flight Tickets Search
-Specify search parameters using any object that confirms to ```JRSDKSearchInfo``` protocol. Simple implementation of this protocol available in ```JRSDKConfigurableSearchInfo``` interface, but feel free to create your own if needed. Look at the example below.
+Specify search parameters using a ```JRSDKSearchInfoBuilder``` object. Take a look at the example below.
 
 #### Create search info
 Create simple object that describes new search:
 
 ```objc
-JRSDKConfigurableSearchInfo *searchInfo = [[JRSDKConfigurableSearchInfo alloc] init];
+JRSDKConfigurableSearchInfo *searchInfoBuilder = [[JRSDKSearchInfoBuilder alloc] init];
 ```
 Set necessary parameters for the search (*adults = 2* and *travelClass = Business* means that two adults would like to travel in business class):
 
 ```objc
-searchInfo.adults = 2;
-searchInfo.travelClass = JRSDKTravelClassBusiness;
+searchInfoBuilder.adults = 2;
+searchInfoBuilder.travelClass = JRSDKTravelClassBusiness;
 ```
 Set travel dates and airports (using airports storage from the SDK):
 
 ```objc
-JRSDKConfigurableTravelSegment *firstTravelSegment = [[JRSDKConfigurableTravelSegment alloc] init];
-firstTravelSegment.departureDate = [NSDate date];
-firstTravelSegment.originAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"LED"];
-firstTravelSegment.destinationAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"MOW"];
+JRSDKTravelSegmentBuilder *travelSegmentBuilder = [JRSDKTravelSegmentBuilder new]
+travelSegmentBuilder.departureDate = [NSDate date];
+travelSegmentBuilder.originAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"LED"];
+travelSegmentBuilder.destinationAirport = [[AviasalesSDK sharedInstance].airportsStorage findAnythingByIATA:@"MOW"];
 ```
 Save that travel segment to the search info:
 
 ```objc
-searchInfo.travelSegments = [NSOrderedSet orderedSetWithObject:firstTravelSegment];
+searchInfoBuilder.travelSegments = [NSOrderedSet orderedSetWithObject:[travelSegmentBuilder build]];
 ```
+
+And finally we can build a `JRSDKSearchInfo` object for further usage:
+
+```objc
+JRSDKSearchInfo *searchInfo = [searchInfoBuilder build];
+```
+
 That's it. Search info is ready for search.
 
 ####Perform search request
@@ -74,10 +81,10 @@ To retrieve live and final search results set delegate (```JRSDKSearchPerformerD
 searchPerformer.delegate = self;
 ```
 This delegate requires to implement three methods:
-first one needed to receive live search results
+First one is called when results are ready to be displayed (SDK continues to wait for more results after this call and in some **very rare** cases it can get cheaper tickets for this request):
 
 ```objc
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishRegularSearch:(id<JRSDKSearchInfo>)searchInfo withResult:(id<JRSDKSearchResult>)result;
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishRegularSearch:(JRSDKSearchInfo *)searchInfo withResult:(JRSDKSearchResult *)result andMetropolitanResult:(JRSDKSearchResult *)metropolitanResult;
 ```
 Second needed to receive error if it occures during the search
 
@@ -89,6 +96,13 @@ And the third one needed to understand when the process is finished. After its c
 ```objc
 - (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinalizeSearchWithInfo:(id<JRSDKSearchInfo>)searchInfo error:(NSError *)error;
 ```
+
+Optional method is called when a new chunk of tickets is received from server:
+
+```objc
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFindSomeTickets:(JRSDKSearchResultsChunk *)newTickets inSearchInfo:(JRSDKSearchInfo *)searchInfo temporaryResult:(JRSDKSearchResult *)temporaryResult temporaryMetropolitanResult:(JRSDKSearchResult *)temporaryMetropolitanResult;
+```
+
 Start search performing:
 
 ```objc
@@ -97,23 +111,18 @@ Start search performing:
 ```
 
 ####Parsing search result
-Search result is provided with ```id<JRSDKSearchResult>``` object.
 
-Property                  | Description
-:------------------------ | :------------------------
-```searchID```            | this parameter is necessary in [purchase process](#ticket-purchase-anchor)
-```strictSearchTickets``` | tickets that found exactly between requested airports
-```searchTickets```       | tickets that found between cities (metropolitan areas) that is near to requested airports
+Search results are received as ```JRSDKSearchResult``` objects. If a search is started with a specific airport as a parameter, ```result``` и ```metropolitanResult``` will be different — tha last one will contain tickets to any airport of the given city.
 
 ### <a name="ticket-purchase-anchor"></a>💸 Tickets purchase
-```AviasalesSDKPurchasePerformer``` is object used to perform ticket purchase. Each ticket contains different prices, you should use one of them as an input parameter.
-Create performer using price and searchId that was returned with the search result.
+```AviasalesSDKPurchasePerformer``` is object used to perform ticket purchase. Each ticket contains different proposals from different agencies, you should use one of them as an input parameter.
+Create performer using price and searchId (```JRSDKSearchResult > JRSDKSearchResultInfo```) that was returned with the search result.
 
 ```objc
 - (instancetype)initWithPrice:(id <JRSDKPrice>)price
                      searchId:(NSString *)searchId;
 ```
-and start purchase using a method
+Generate a link for the purchase:
 
 ```objc
 - (void)performWithDelegate:(id <AviasalesSDKPurchasePerformerDelegate>)delegate;

@@ -16,7 +16,6 @@
 		070625E71CC4F03B00974AB4 /* ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070625E61CC4F03B00974AB4 /* ProjectTests.m */; };
 		071FD1291D9AADFE00FA1BFF /* all_currencies_rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 071FD0F61D9AADFE00FA1BFF /* all_currencies_rates.json */; };
 		071FD12A1D9AADFE00FA1BFF /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 071FD0F71D9AADFE00FA1BFF /* airports.json */; };
-		071FD12B1D9AADFE00FA1BFF /* short_airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 071FD0F91D9AADFE00FA1BFF /* short_airports.json */; };
 		076FAB4E1D37C9830044FEF2 /* AviasalesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076FAB4C1D37C9830044FEF2 /* AviasalesSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,53 +58,29 @@
 		070625E81CC4F03B00974AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		071FD0F61D9AADFE00FA1BFF /* all_currencies_rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_currencies_rates.json; sourceTree = "<group>"; };
 		071FD0F81D9AADFE00FA1BFF /* da */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = da; path = da.lproj/airports.json; sourceTree = "<group>"; };
-		071FD0FA1D9AADFE00FA1BFF /* da */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = da; path = da.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD0FB1D9AADFE00FA1BFF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/airports.json; sourceTree = "<group>"; };
-		071FD0FC1D9AADFE00FA1BFF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD0FD1D9AADFE00FA1BFF /* el */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = el; path = el.lproj/airports.json; sourceTree = "<group>"; };
-		071FD0FE1D9AADFE00FA1BFF /* el */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = el; path = el.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD0FF1D9AADFE00FA1BFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1001D9AADFE00FA1BFF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1011D9AADFE00FA1BFF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = es; path = es.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1021D9AADFE00FA1BFF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = es; path = es.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1031D9AADFE00FA1BFF /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fi; path = fi.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1041D9AADFE00FA1BFF /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fi; path = fi.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1051D9AADFE00FA1BFF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fr; path = fr.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1061D9AADFE00FA1BFF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fr; path = fr.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1071D9AADFE00FA1BFF /* id */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = id; path = id.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1081D9AADFE00FA1BFF /* id */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = id; path = id.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1091D9AADFE00FA1BFF /* it */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = it; path = it.lproj/airports.json; sourceTree = "<group>"; };
-		071FD10A1D9AADFE00FA1BFF /* it */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = it; path = it.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD10B1D9AADFE00FA1BFF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ja; path = ja.lproj/airports.json; sourceTree = "<group>"; };
-		071FD10C1D9AADFE00FA1BFF /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ja; path = ja.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD10D1D9AADFE00FA1BFF /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ko; path = ko.lproj/airports.json; sourceTree = "<group>"; };
-		071FD10E1D9AADFE00FA1BFF /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ko; path = ko.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD10F1D9AADFE00FA1BFF /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ms; path = ms.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1101D9AADFE00FA1BFF /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ms; path = ms.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1111D9AADFE00FA1BFF /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nb; path = nb.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1121D9AADFE00FA1BFF /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nb; path = nb.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1131D9AADFE00FA1BFF /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nl; path = nl.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1141D9AADFE00FA1BFF /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nl; path = nl.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1151D9AADFE00FA1BFF /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pl; path = pl.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1161D9AADFE00FA1BFF /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pl; path = pl.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1171D9AADFE00FA1BFF /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-PT"; path = "pt-PT.lproj/airports.json"; sourceTree = "<group>"; };
-		071FD1181D9AADFE00FA1BFF /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-PT"; path = "pt-PT.lproj/short_airports.json"; sourceTree = "<group>"; };
 		071FD1191D9AADFE00FA1BFF /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/airports.json; sourceTree = "<group>"; };
-		071FD11A1D9AADFE00FA1BFF /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD11B1D9AADFE00FA1BFF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ru; path = ru.lproj/airports.json; sourceTree = "<group>"; };
-		071FD11C1D9AADFE00FA1BFF /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ru; path = ru.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD11D1D9AADFE00FA1BFF /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = sv; path = sv.lproj/airports.json; sourceTree = "<group>"; };
-		071FD11E1D9AADFE00FA1BFF /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = sv; path = sv.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD11F1D9AADFE00FA1BFF /* th */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = th; path = th.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1201D9AADFE00FA1BFF /* th */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = th; path = th.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1211D9AADFE00FA1BFF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = tr; path = tr.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1221D9AADFE00FA1BFF /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = tr; path = tr.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1231D9AADFE00FA1BFF /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = vi; path = vi.lproj/airports.json; sourceTree = "<group>"; };
-		071FD1241D9AADFE00FA1BFF /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = vi; path = vi.lproj/short_airports.json; sourceTree = "<group>"; };
 		071FD1251D9AADFE00FA1BFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hans"; path = "zh-Hans.lproj/airports.json"; sourceTree = "<group>"; };
-		071FD1261D9AADFE00FA1BFF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hans"; path = "zh-Hans.lproj/short_airports.json"; sourceTree = "<group>"; };
 		071FD1271D9AADFE00FA1BFF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hant"; path = "zh-Hant.lproj/airports.json"; sourceTree = "<group>"; };
-		071FD1281D9AADFE00FA1BFF /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hant"; path = "zh-Hant.lproj/short_airports.json"; sourceTree = "<group>"; };
 		076FAB4C1D37C9830044FEF2 /* AviasalesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AviasalesSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,7 +160,6 @@
 			children = (
 				071FD0F61D9AADFE00FA1BFF /* all_currencies_rates.json */,
 				071FD0F71D9AADFE00FA1BFF /* airports.json */,
-				071FD0F91D9AADFE00FA1BFF /* short_airports.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -308,7 +282,6 @@
 				070625D91CC4F03B00974AB4 /* Assets.xcassets in Resources */,
 				071FD1291D9AADFE00FA1BFF /* all_currencies_rates.json in Resources */,
 				070625D71CC4F03B00974AB4 /* Main.storyboard in Resources */,
-				071FD12B1D9AADFE00FA1BFF /* short_airports.json in Resources */,
 				071FD12A1D9AADFE00FA1BFF /* airports.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,37 +370,6 @@
 				071FD1271D9AADFE00FA1BFF /* zh-Hant */,
 			);
 			name = airports.json;
-			sourceTree = "<group>";
-		};
-		071FD0F91D9AADFE00FA1BFF /* short_airports.json */ = {
-			isa = PBXVariantGroup;
-			children = (
-				071FD0FA1D9AADFE00FA1BFF /* da */,
-				071FD0FC1D9AADFE00FA1BFF /* de */,
-				071FD0FE1D9AADFE00FA1BFF /* el */,
-				071FD1001D9AADFE00FA1BFF /* en */,
-				071FD1021D9AADFE00FA1BFF /* es */,
-				071FD1041D9AADFE00FA1BFF /* fi */,
-				071FD1061D9AADFE00FA1BFF /* fr */,
-				071FD1081D9AADFE00FA1BFF /* id */,
-				071FD10A1D9AADFE00FA1BFF /* it */,
-				071FD10C1D9AADFE00FA1BFF /* ja */,
-				071FD10E1D9AADFE00FA1BFF /* ko */,
-				071FD1101D9AADFE00FA1BFF /* ms */,
-				071FD1121D9AADFE00FA1BFF /* nb */,
-				071FD1141D9AADFE00FA1BFF /* nl */,
-				071FD1161D9AADFE00FA1BFF /* pl */,
-				071FD1181D9AADFE00FA1BFF /* pt-PT */,
-				071FD11A1D9AADFE00FA1BFF /* pt */,
-				071FD11C1D9AADFE00FA1BFF /* ru */,
-				071FD11E1D9AADFE00FA1BFF /* sv */,
-				071FD1201D9AADFE00FA1BFF /* th */,
-				071FD1221D9AADFE00FA1BFF /* tr */,
-				071FD1241D9AADFE00FA1BFF /* vi */,
-				071FD1261D9AADFE00FA1BFF /* zh-Hans */,
-				071FD1281D9AADFE00FA1BFF /* zh-Hant */,
-			);
-			name = short_airports.json;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

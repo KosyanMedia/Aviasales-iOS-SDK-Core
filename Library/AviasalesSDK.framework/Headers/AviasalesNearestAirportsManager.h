@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, AviasalesNearestAirportsManagerStatus) {
  *
  *  @warning May be nil if manager did not load the nearest airports yet
  */
-@property (nonatomic, strong, readonly, nullable) NSArray<id<JRSDKAirport>> *airports;
+@property (nonatomic, strong, readonly, nullable) NSArray<JRSDKAirport *> *airports;
 
 /**
  *  Forces manager to reload the nearest airports

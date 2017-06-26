@@ -16,7 +16,7 @@ typedef NSString * JRSDKCurrency;
  */
 typedef NSInteger JRSDKFlightDuration;
 
-typedef float JRSDKCurrencyRate;
+typedef float JRSDKCurrencyRateValue;
 
 
 #endif /* DataDefines_h */

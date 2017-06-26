@@ -8,12 +8,13 @@
 #import <MapKit/MapKit.h>
 #if !TARGET_OS_WATCH
 #import <AviasalesSDK/DataDefines.h>
+#import <AviasalesSDK/JRSDKModelObject.h>
+#import <AviasalesSDK/JRSDKLocation.h>
 #else
 #import <AviasalesWatchSDK/DataDefines.h>
+#import <AviasalesWatchSDK/JRSDKModelObject.h>
+#import <AviasalesWatchSDK/JRSDKLocation.h>
 #endif
-
-#ifndef JRSDKAirport_h
-#define JRSDKAirport_h
 
 /**
  *  All possible airport types
@@ -29,84 +30,98 @@ typedef NS_ENUM(NSUInteger, JRSDKAirportType) {
     JRSDKAirportTypeRailwayStation
 };
 
-@protocol JRSDKAirport <NSObject>
+@interface JRSDKAirport : JRSDKModelObject <JRSDKLocation>
 
 /**
  * Average airline rating (float from 0 to 5)
  */
-@property (nonatomic, retain, readonly) NSNumber *averageRate;
+@property (nonatomic, retain, nullable) NSNumber *averageRate;
 
 /**
  *  City
  */
-@property (nonatomic, retain, readonly) NSString *city;
-@property (nonatomic, retain, readonly) NSString *cityNameCasePr;
-@property (nonatomic, retain, readonly) NSString *cityNameCaseRo;
-@property (nonatomic, retain, readonly) NSString *cityNameCaseVi;
+@property (nonatomic, retain, nullable) NSString *city;
+@property (nonatomic, retain, nullable) NSString *cityNameCasePr;
+@property (nonatomic, retain, nullable) NSString *cityNameCaseRo;
+@property (nonatomic, retain, nullable) NSString *cityNameCaseVi;
 
 /**
- *  Country
+ *  Country code
  */
-@property (nonatomic, retain, readonly) NSString *country;
+@property (nonatomic, retain, nullable) NSString *countryCode;
+
+/**
+ *  Country name
+ */
+@property (nonatomic, retain, nullable) NSString *countryName;
 
 /**
  *  Airport IATA
  */
-@property (nonatomic, strong, readonly) JRSDKIATA iata;
+@property (nonatomic, strong, nonnull) JRSDKIATA iata;
 
 /**
  *  Parent IATA (e.g. for VKO airport there is MOW parent IATA)
  */
-@property (nonatomic, retain, readonly) JRSDKIATA parentIata;
+@property (nonatomic, retain, nullable) JRSDKIATA parentIata;
 
 /**
  *  Airport coordinates
  */
-@property (nonatomic, retain, readonly) NSNumber *latitude;
-@property (nonatomic, retain, readonly) NSNumber *longitude;
+@property (nonatomic, retain, nullable) NSNumber *latitude;
+@property (nonatomic, retain, nullable) NSNumber *longitude;
 
 /**
  *  Airport time zone
  */
-@property (nonatomic, strong, readonly) NSTimeZone *timeZone;
+@property (nonatomic, strong, nullable) NSTimeZone *timeZone;
 
 /**
  *  Airport name
  *  
  *  @warning May be empty when object represents a metropolitan area
  */
-@property (nonatomic, retain, readonly) NSString *airportName;
-
-/**
- *  Number of searches that represents airport popularity
- */
-@property (nonatomic, assign, readonly) NSInteger numberOfSearches;
+@property (nonatomic, retain, nullable) NSString *airportName;
 
 /**
  *  Whether object represents a metropolitan area
  */
-@property (nonatomic, assign, readonly) BOOL isCity;
+@property (nonatomic, assign) BOOL isCity;
 
 /**
  *  Airport type
  */
-@property (nonatomic, assign, readonly) JRSDKAirportType airportType;
+@property (nonatomic, assign) JRSDKAirportType airportType;
 
 /**
  *  A list of strings you can search this airport with
  */
-@property (nonatomic, retain, readonly) NSArray <NSString *> *indexStrings;
+@property (nonatomic, retain, nonnull) NSArray <NSString *> *indexStrings;
 
 /**
  *  Whether the object was received from server
  */
-@property (nonatomic, assign, readonly) BOOL fromServer;
+@property (nonatomic, assign) BOOL fromServer;
+
+/**
+ *  Can make search searchable
+ */
+@property (nonatomic, assign) BOOL searchable;
+
+/**
+ *  Can make flight
+ */
+@property (nonatomic, assign) BOOL flightable;
+
+/**
+ *  Used to sort autocomplete list
+ */
+@property (nonatomic, assign) NSInteger weight;
 
 /**
  *  Convenient method to get coordinates in different formats
  */
-- (NSArray *)coordinates;
+- (nullable NSArray *)coordinates;
 - (CLLocationCoordinate2D)CLLCoordinate;
 
 @end
-#endif

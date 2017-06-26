@@ -11,29 +11,9 @@
 #import <AviasalesWatchSDK/JRSDKModelUtils.h>
 #endif
 
-@protocol JRSDKAirport;
 @protocol AviasalesAirportsStorageProtocol;
 
 @interface JRSDKModelUtils (JRSDKAirport)
-
-/**
- *  Compares two airports
- *
- *  @param airport1  First airport
- *  @param airport2  Second airport
- *
- *  @return `YES` if airports are the same, `NO` otherwise
- */
-+ (BOOL)airport:(id<JRSDKAirport>)airport1 isEqualToAirport:(id<JRSDKAirport>)airport2;
-
-/**
- *  Copies an airport
- *
- *  @param src Airport to copy
- *
- *  @return An airport copy 
- */
-+ (id<JRSDKAirport>)copyAirportForSearch:(id<JRSDKAirport>)src;
 
 /**
  *  Checks airport to be the only airport in the city
@@ -42,6 +22,6 @@
  *
  *  @return `YES` when the airport is the only airport in the city, `NO` otherwise
  */
-+ (BOOL)isAirportSingleInItsCity:(id<JRSDKAirport>)airport;
++ (BOOL)isAirportSingleInItsCity:(JRSDKAirport *)airport;
 
 @end

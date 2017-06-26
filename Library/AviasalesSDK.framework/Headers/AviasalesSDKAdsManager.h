@@ -8,9 +8,13 @@
 #import <Foundation/Foundation.h>
 
 
-@protocol JRSDKSearchInfo;
+@class JRSDKSearchInfo;
 @class AviasalesSDKAdsView;
 typedef void(^AviasalesSDKAdsManagerCompletion)(AviasalesSDKAdsView *__nullable adsView, NSError *__nullable error);
+
+
+extern NSString * _Nonnull const kAviasalesSDKAdsManagerErrorDomain;
+extern NSInteger const kAviasalesSDKAdsManagerErrorCodeEmplacementIsNotEnabled;
 
 
 /**
@@ -24,7 +28,7 @@ typedef void(^AviasalesSDKAdsManagerCompletion)(AviasalesSDKAdsView *__nullable 
  *  @param searchInfo Search info object for the current search
  *  @param completion Callback that will receive an `UIView` subclass to place on screen or an `NSError` in case advert did fail to load
  */
-- (void)loadAdsViewForWaitingScreenWithSearchInfo:(nonnull id <JRSDKSearchInfo>)searchInfo completion:(__nonnull AviasalesSDKAdsManagerCompletion)completion;
-- (void)loadAdsViewForSearchResultsWithSearchInfo:(nonnull id <JRSDKSearchInfo>)searchInfo completion:(__nonnull AviasalesSDKAdsManagerCompletion)completion;
+- (void)loadAdsViewForWaitingScreenWithSearchInfo:(nonnull JRSDKSearchInfo *)searchInfo completion:(nonnull AviasalesSDKAdsManagerCompletion)completion;
+- (void)loadAdsViewForSearchResultsWithSearchInfo:(nonnull JRSDKSearchInfo *)searchInfo completion:(nonnull AviasalesSDKAdsManagerCompletion)completion;
 
 @end

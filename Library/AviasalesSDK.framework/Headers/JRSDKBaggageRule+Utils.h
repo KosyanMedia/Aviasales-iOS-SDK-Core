@@ -6,7 +6,7 @@
 //
 
 
-@protocol JRSDKBaggageRule;
+@class JRSDKBaggageRule;
 
 
 @interface JRSDKModelUtils (JRSDKBaggageRule)
@@ -18,7 +18,7 @@
  *
  *  @return `YES` if there is any information about baggage, `NO` otherwise
  */
-+ (BOOL)baggageRuleHasAnyInfo:(id <JRSDKBaggageRule>)baggageRule;
++ (BOOL)baggageRuleHasAnyInfo:(JRSDKBaggageRule *)baggageRule;
 
 /**
  *  Compares two baggage rules by total baggage weight
@@ -28,6 +28,6 @@
  *
  *  @return Comparison result
  */
-+ (NSComparisonResult)compareBaggageRule:(id<JRSDKBaggageRule>)rule toOtherBaggageRule:(id<JRSDKBaggageRule>)otherRule;
++ (NSComparisonResult)compareBaggageRule:(JRSDKBaggageRule *)rule toOtherBaggageRule:(JRSDKBaggageRule *)otherRule;
 
 @end

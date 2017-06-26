@@ -12,7 +12,6 @@
 #import <AviasalesSDK/JRSDKModelUtils.h>
 #endif
 
-@protocol JRSDKAirline;
 
 @interface JRSDKModelUtils (Airline)
 

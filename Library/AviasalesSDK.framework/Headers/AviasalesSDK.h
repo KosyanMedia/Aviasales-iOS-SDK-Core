@@ -34,6 +34,7 @@ FOUNDATION_EXPORT const unsigned char AviasalesSDKVersionString[];
 #import <AviasalesSDK/AviasalesSDKAdsView.h>
 #import <AviasalesSDK/AviasalesNearestAirportsManager.h>
 #import <AviasalesSDK/AviasalesAirportsSearchPerformer.h>
+#import <AviasalesSDK/AviasalesAirportsGeoSearchPerformer.h>
 #import <AviasalesSDK/JRSDKSearchPerformer.h>
 
 /**
@@ -42,6 +43,7 @@ FOUNDATION_EXPORT const unsigned char AviasalesSDKVersionString[];
 #import <AviasalesSDK/JRSDKModelUtils.h>
 #import <AviasalesSDK/JRSDKAirline+Utils.h>
 #import <AviasalesSDK/JRSDKTicket+Utils.h>
+#import <AviasalesSDK/JRSDKProposal+Utils.h>
 #import <AviasalesSDK/JRSDKPrice+Utils.h>
 #import <AviasalesSDK/JRSDKSearchInfo+Utils.h>
 #import <AviasalesSDK/JRSDKFlightSegment+Utils.h>
@@ -55,27 +57,54 @@ FOUNDATION_EXPORT const unsigned char AviasalesSDKVersionString[];
 /**
  *  Model headers
  */
+#import <AviasalesSDK/JRSDKLocation.h>
 #import <AviasalesSDK/DataDefines.h>
+#import <AviasalesSDK/JRSDKModelObject.h>
 #import <AviasalesSDK/JRSDKAirline.h>
 #import <AviasalesSDK/JRSDKAirport.h>
+#import <AviasalesSDK/JRSDKCountry.h>
 #import <AviasalesSDK/JRSDKAlliance.h>
 #import <AviasalesSDK/JRSDKCurrencyRate.h>
 #import <AviasalesSDK/JRSDKFlight.h>
 #import <AviasalesSDK/JRSDKFlightSegment.h>
 #import <AviasalesSDK/JRSDKGate.h>
 #import <AviasalesSDK/JRSDKPaymentMethod.h>
+#import <AviasalesSDK/JRSDKProposal.h>
 #import <AviasalesSDK/JRSDKPrice.h>
 #import <AviasalesSDK/JRSDKSearchInfo.h>
+#import <AviasalesSDK/JRSDKSearchResultInfo.h>
 #import <AviasalesSDK/JRSDKSearchResult.h>
 #import <AviasalesSDK/JRSDKTicket.h>
 #import <AviasalesSDK/JRSDKTravelSegment.h>
 #import <AviasalesSDK/JRSDKBaggageRule.h>
+#import <AviasalesSDK/JRSDKProposalRate.h>
+#import <AviasalesSDK/JRSDKProposalFlightSegmentRate.h>
+#import <AviasalesSDK/JRSDKProposalFlightRate.h>
 
 /**
- *  Model implementation headers
+ * Model builders headers
  */
-#import <AviasalesSDK/JRSDKConfigurableSearchInfo.h>
-#import <AviasalesSDK/JRSDKConfigurableTravelSegment.h>
+
+#import <AviasalesSDK/JRSDKTicketBuilder.h>
+#import <AviasalesSDK/JRSDKProposalBuilder.h>
+#import <AviasalesSDK/JRSDKPriceBuilder.h>
+#import <AviasalesSDK/JRSDKGateBuilder.h>
+#import <AviasalesSDK/JRSDKPaymentMethodFactory.h>
+#import <AviasalesSDK/JRSDKSearchInfoBuilder.h>
+#import <AviasalesSDK/JRSDKTravelSegmentBuilder.h>
+#import <AviasalesSDK/JRSDKFlightSegmentBuilder.h>
+#import <AviasalesSDK/JRSDKAirlineBuilder.h>
+#import <AviasalesSDK/JRSDKAllianceBuilder.h>
+#import <AviasalesSDK/JRSDKBaggageRuleBuilder.h>
+#import <AviasalesSDK/JRSDKAirportBuilder.h>
+#import <AviasalesSDK/JRSDKCountryBuilder.h>
+#import <AviasalesSDK/JRSDKFlightBuilder.h>
+#import <AviasalesSDK/JRSDKSearchResultBuilder.h>
+#import <AviasalesSDK/JRSDKSearchResultInfoBuilder.h>
+#import <AviasalesSDK/JRSDKProposalRateBuilder.h>
+#import <AviasalesSDK/JRSDKProposalFlightSegmentRateBuilder.h>
+#import <AviasalesSDK/JRSDKProposalFlightRateBuilder.h>
+
 
 /**
  *  Notification is posted when currency code is being changed

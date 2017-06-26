@@ -5,28 +5,29 @@
 //  This code is distributed under the terms and conditions of the MIT license.
 //
 
-@protocol JRSDKTicket;
+#if !TARGET_OS_WATCH
+#import <AviasalesSDK/JRSDKModelObject.h>
+#else
+#import <AviasalesWatchSDK/JRSDKModelObject.h>
+#endif
 
-@protocol JRSDKSearchResult
+@class JRSDKTicket, AviasalesSDKTicketAdsCampaign, JRSDKSearchResultInfo;
+
+@interface JRSDKSearchResult : JRSDKModelObject
 
 /**
- *  Identifier of current search. Used in purchase routines
+ *  Corresponding search result information
  */
-@property (nonatomic, strong, readonly) NSString *searchID;
-
-/**
- *  Tickets ordered by price (for the whole metropolitan area when search was performed for the single airport in an metropolitan area)
- */
-@property (nonatomic, strong, readonly) NSOrderedSet <id<JRSDKTicket>> *searchTickets;
+@property (nonatomic, strong, nonnull) JRSDKSearchResultInfo *searchResultInfo;
 
 /**
  *  Tickets ordered by price
  */
-@property (nonatomic, strong, readonly) NSOrderedSet <id<JRSDKTicket>> *strictSearchTickets;
+@property (nonatomic, strong, nonnull) NSOrderedSet <JRSDKTicket *> *tickets;
 
 /**
- *  Search date
+ *  The cheapiest price
  */
-@property (nonatomic, strong, readonly) NSDate *receivingDate;
+@property (nonatomic, strong, nullable) JRSDKPrice *bestPrice;
 
 @end

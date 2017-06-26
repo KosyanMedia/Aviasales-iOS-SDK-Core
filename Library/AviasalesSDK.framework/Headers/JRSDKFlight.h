@@ -5,63 +5,69 @@
 //  This code is distributed under the terms and conditions of the MIT license.
 //
 
-@protocol JRSDKAirport, JRSDKFlightSegment, JRSDKAirline;
+#if !TARGET_OS_WATCH
+#import <AviasalesSDK/JRSDKModelObject.h>
+#else
+#import <AviasalesWatchSDK/JRSDKModelObject.h>
+#endif
 
-@protocol JRSDKFlight <NSObject>
+@class JRSDKAirport, JRSDKFlightSegment, JRSDKAirline;
+
+@interface JRSDKFlight : JRSDKModelObject
 
 /**
  *  Aircraft that performs the flight
  */
-@property (nonatomic, retain, readonly) NSString *aircraft;
+@property (nonatomic, retain, nonnull) NSString *aircraft;
 
 /**
  *  Arrival date (local time of destination airport)
  */
-@property (nonatomic, retain, readonly) NSDate *arrivalDate;
+@property (nonatomic, retain, nonnull) NSDate *arrivalDate;
 
 /**
  *  Transfer duration before the flight
  */
-@property (nonatomic, retain, readonly) NSNumber *delay;
+@property (nonatomic, retain, nonnull) NSNumber *delay;
 
 /**
  *  Departure time (local time of origin airport)
  */
-@property (nonatomic, retain, readonly) NSDate *departureDate;
+@property (nonatomic, retain, nonnull) NSDate *departureDate;
 
 /**
  *  Flight duration (minutes)
  */
-@property (nonatomic, retain, readonly) NSNumber *duration;
+@property (nonatomic, retain, nonnull) NSNumber *duration;
 
 /**
  *  Flight number
  */
-@property (nonatomic, retain, readonly) NSString *number;
+@property (nonatomic, retain, nonnull) NSString *number;
 
 /**
  *  Airline that performs the flight
  */
-@property (nonatomic, retain, readonly) id <JRSDKAirline> airline;
+@property (nonatomic, retain, nonnull) JRSDKAirline *airline;
 
 /**
  *  An airline that actually performs the flight
  */
-@property (nonatomic, retain, readonly) id <JRSDKAirline> operatingAirline;
+@property (nonatomic, retain, nonnull) JRSDKAirline *operatingAirline;
 
 /**
  *  An airport where the flight starts
  */
-@property (nonatomic, retain, readonly) id <JRSDKAirport> originAirport;
+@property (nonatomic, retain, nonnull) JRSDKAirport *originAirport;
 
 /**
  *  An airport where the flight ends
  */
-@property (nonatomic, retain, readonly) id <JRSDKAirport> destinationAirport;
+@property (nonatomic, retain, nonnull) JRSDKAirport *destinationAirport;
 
 /**
- *  Baggage rule
+ *  Technical stops
  */
-@property (nonatomic, retain, readonly) id <JRSDKBaggageRule> baggageRule;
+@property (nonatomic, retain, nonnull) NSOrderedSet<JRSDKAirport *> *technicalStops;
 
 @end

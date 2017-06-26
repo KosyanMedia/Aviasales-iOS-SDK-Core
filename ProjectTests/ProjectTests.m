@@ -37,7 +37,4 @@ static inline NSBundle *AviasalesBundle(){
     XCTAssertNotNil([AviasalesBundle() pathForResource:@"airports" ofType:@"json"]);
 }
 
-- (void)testResourcesContainsShortAirports {
-    XCTAssertNotNil([AviasalesBundle() pathForResource:@"short_airports" ofType:@"json"]);
-}
 @end

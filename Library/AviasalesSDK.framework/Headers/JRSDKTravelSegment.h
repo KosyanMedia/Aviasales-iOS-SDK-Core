@@ -5,23 +5,29 @@
 //  This code is distributed under the terms and conditions of the MIT license.
 //
 
-@protocol JRSDKAirport;
+#if !TARGET_OS_WATCH
+#import <AviasalesSDK/JRSDKModelObject.h>
+#else
+#import <AviasalesWatchSDK/JRSDKModelObject.h>
+#endif
 
-@protocol JRSDKTravelSegment
+@class JRSDKAirport;
+
+@interface JRSDKTravelSegment : JRSDKModelObject
 
 /**
  *  Departure date
  */
-@property (nonatomic, retain) NSDate *departureDate;
+@property (nonatomic, retain, nonnull) NSDate *departureDate;
 
 /**
  *  Origin airport
  */
-@property (nonatomic, retain) id<JRSDKAirport> originAirport;
+@property (nonatomic, retain, nonnull) JRSDKAirport *originAirport;
 
 /**
  *  Destination airport
  */
-@property (nonatomic, retain) id<JRSDKAirport> destinationAirport;
+@property (nonatomic, retain, nonnull) JRSDKAirport *destinationAirport;
 
 @end

@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AviasalesSDK/JRSDKPrice.h>
+#import "JRSDKProposal.h"
 
 @protocol AviasalesSDKPurchasePerformerDelegate;
 
@@ -18,12 +18,12 @@
 /**
  *  Creates `AviasalesSDKPurchasePerformer` instance
  *
- *  @param price    Price that you want to purchase
- *  @param searchId Unique search identifier that can be found in `id <JRSDKSearchResult>` `searchID` field
+ *  @param proposal    Proposal that you want to purchase
+ *  @param searchId Unique search identifier that can be found in `JRSDKSearchResult *` `searchID` field
  *
  *  @return `AviasalesSDKPurchasePerformer` instance
  */
-- (instancetype)initWithPrice:(id <JRSDKPrice>)price searchId:(NSString *)searchId;
+- (instancetype)initWithProposal:(JRSDKProposal *)proposal searchId:(NSString *)searchId;
 
 /**
  *  Starts the routine
@@ -31,6 +31,11 @@
  *  @param delegate An object that will handle the routine results
  */
 - (void)performWithDelegate:(id <AviasalesSDKPurchasePerformerDelegate>)delegate;
+
+/**
+ *  Cancels the routine
+ */
+- (void)cancel;
 
 @end
 

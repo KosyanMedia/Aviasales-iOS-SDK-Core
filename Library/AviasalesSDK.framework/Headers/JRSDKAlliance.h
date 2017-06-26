@@ -5,12 +5,18 @@
 //  This code is distributed under the terms and conditions of the MIT license.
 //
 
-@protocol JRSDKAlliance <NSObject>
+#if !TARGET_OS_WATCH
+#import <AviasalesSDK/JRSDKModelObject.h>
+#else
+#import <AviasalesWatchSDK/JRSDKModelObject.h>
+#endif
+
+@interface JRSDKAlliance : JRSDKModelObject
 
 /**
  *  Alliance name
  */
-@property (nonatomic, retain, readonly) NSString *name;
+@property (nonatomic, retain, nonnull) NSString *name;
 
 @end
 

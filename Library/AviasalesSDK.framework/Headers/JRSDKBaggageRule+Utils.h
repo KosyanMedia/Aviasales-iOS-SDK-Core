@@ -18,7 +18,7 @@
  *
  *  @return `YES` if there is any information about baggage, `NO` otherwise
  */
-+ (BOOL)baggageRuleHasAnyInfo:(JRSDKBaggageRule *)baggageRule;
++ (BOOL)baggageRuleHasAnyInfo:(nullable JRSDKBaggageRule *)baggageRule;
 
 /**
  *  Compares two baggage rules by total baggage weight
@@ -28,6 +28,6 @@
  *
  *  @return Comparison result
  */
-+ (NSComparisonResult)compareBaggageRule:(JRSDKBaggageRule *)rule toOtherBaggageRule:(JRSDKBaggageRule *)otherRule;
++ (NSComparisonResult)compareBaggageRule:(nonnull JRSDKBaggageRule *)rule toOtherBaggageRule:(nonnull JRSDKBaggageRule *)otherRule;
 
 @end

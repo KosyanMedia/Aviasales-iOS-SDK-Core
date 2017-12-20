@@ -11,14 +11,14 @@
 #import <AviasalesWatchSDK/JRSDKModelObject.h>
 #endif
 
-@class JRSDKAirport, JRSDKFlightSegment, JRSDKAirline;
+@class JRSDKAirport, JRSDKFlightSegment, JRSDKAirline, JRSDKFlightInfo;
 
 @interface JRSDKFlight : JRSDKModelObject
 
 /**
  *  Aircraft that performs the flight
  */
-@property (nonatomic, retain, nonnull) NSString *aircraft;
+@property (nonatomic, retain, nullable) NSString *aircraft;
 
 /**
  *  Arrival date (local time of destination airport)
@@ -46,14 +46,19 @@
 @property (nonatomic, retain, nonnull) NSString *number;
 
 /**
+ *  Flight equipment
+ */
+@property (nonatomic, retain, nullable) NSString *equipment;
+
+/**
  *  Airline that performs the flight
  */
 @property (nonatomic, retain, nonnull) JRSDKAirline *airline;
 
 /**
- *  An airline that actually performs the flight
+ *  An airline that sells tickets to the flight
  */
-@property (nonatomic, retain, nonnull) JRSDKAirline *operatingAirline;
+@property (nonatomic, retain, nonnull) JRSDKAirline *marketingAirline;
 
 /**
  *  An airport where the flight starts
@@ -69,5 +74,10 @@
  *  Technical stops
  */
 @property (nonatomic, retain, nonnull) NSOrderedSet<JRSDKAirport *> *technicalStops;
+
+/**
+ *  Additional flight info
+ */
+@property (nonatomic, retain, nonnull) JRSDKFlightInfo *flightInfo;
 
 @end

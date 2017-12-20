@@ -27,7 +27,11 @@ typedef NS_ENUM(NSUInteger, JRSDKAirportType) {
     /**
      *  Railway station
      */
-    JRSDKAirportTypeRailwayStation
+    JRSDKAirportTypeRailwayStation,
+    /**
+     *  Bus station
+     */
+    JRSDKAirportTypeBusStation
 };
 
 @interface JRSDKAirport : JRSDKModelObject <JRSDKLocation>
@@ -121,7 +125,7 @@ typedef NS_ENUM(NSUInteger, JRSDKAirportType) {
 /**
  *  Convenient method to get coordinates in different formats
  */
-- (nullable NSArray *)coordinates;
+- (nullable NSArray <NSNumber *> *)coordinates;
 - (CLLocationCoordinate2D)CLLCoordinate;
 
 @end

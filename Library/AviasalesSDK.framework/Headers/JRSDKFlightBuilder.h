@@ -16,11 +16,13 @@
 @property (nonatomic, retain, nullable) NSDate *departureDate;
 @property (nonatomic, retain, nullable) NSNumber *duration;
 @property (nonatomic, retain, nullable) NSString *number;
+@property (nonatomic, retain, nullable) NSString *equipment;
 @property (nonatomic, retain, nullable) JRSDKAirline *airline;
-@property (nonatomic, retain, nullable) JRSDKAirline *operatingAirline;
+@property (nonatomic, retain, nullable) JRSDKAirline *marketingAirline;
 @property (nonatomic, retain, nullable) JRSDKAirport *originAirport;
 @property (nonatomic, retain, nullable) JRSDKAirport *destinationAirport;
 @property (nonatomic, retain, nullable) NSOrderedSet<JRSDKAirport *> *technicalStops;
+@property (nonatomic, retain, nullable) JRSDKFlightInfo *flightInfo;
 
 - (nullable JRSDKFlight *)build;
 

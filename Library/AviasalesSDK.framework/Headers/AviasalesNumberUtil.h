@@ -18,7 +18,7 @@
  *
  *  @return Converted price value
  */
-+ (NSNumber *)convertPrice:(NSNumber *)price fromCurrency:(JRSDKCurrency)fromCode to:(JRSDKCurrency)toCode;
++ (nullable NSNumber *)convertPrice:(nullable NSNumber *)price fromCurrency:(nonnull JRSDKCurrency)fromCode to:(nonnull JRSDKCurrency)toCode;
 
 /**
  *  Formats price value with currency symbol of selected currency in `AviasalesSDK`
@@ -27,6 +27,6 @@
  *
  *  @return Formatted price
  */
-+ (NSString *)formatPrice:(NSNumber *)price;
++ (nullable NSString *)formatPrice:(nullable NSNumber *)price;
 
 @end

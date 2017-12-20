@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, JRSDKServerAPIError) {
     
     /* Connection errors */
     JRSDKServerAPIErrorConnectionFailed                = 35,
+    JRSDKServerAPIErrorBadConnection                   = 37,
     
     /* Response errors */
     JRSDKServerAPIErrorBadResponse                     = 43,

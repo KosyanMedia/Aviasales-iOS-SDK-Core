@@ -3,7 +3,6 @@
 @interface JRSDKGateBuilder : NSObject
 
 @property (strong, nonatomic, nullable) NSNumber *averageRate;
-@property (strong, nonatomic, nullable) JRSDKCurrency currencyCode;
 @property (strong, nonatomic, nullable) NSString *gateID;
 @property (strong, nonatomic, nullable) NSString *mainGateID;
 @property (strong, nonatomic, nullable) NSString *label;
@@ -13,7 +12,7 @@
 @property (strong, nonatomic, nullable) NSNumber *isAirline;
 @property (strong, nonatomic, nullable) NSNumber *supportsAssistedBooking;
 @property (strong, nonatomic, nullable) NSDate *responseDate;
-@property (strong, nonatomic, nullable) NSSet <JRSDKIATA> *raiseProductivityForAirlineIATAs;
+@property (strong, nonatomic, nullable) NSSet <NSSet <JRSDKIATA> *> *raiseProductivityForAirlineIATAs;
 
 - (nullable JRSDKGate *)build;
 

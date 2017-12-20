@@ -24,7 +24,7 @@
 /**
  *  Country code
  */
-@property (nonatomic, copy, nullable) NSString *code;
+@property (nonatomic, copy, nonnull) NSString *code;
 
 /**
  *  Can make search searchable

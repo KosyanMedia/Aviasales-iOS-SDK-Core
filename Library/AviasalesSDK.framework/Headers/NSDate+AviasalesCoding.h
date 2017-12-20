@@ -14,7 +14,7 @@
  *
  *  @return Date in %d%m format 
  */
-- (NSString *)aviasales_fastDayMonthString;
+- (nonnull NSString *)aviasales_fastDayMonthString;
 
 /**
  *  Creates `NSDate` instance from %d%m string
@@ -23,6 +23,6 @@
  *
  *  @return Parsed date
  */
-+ (NSDate *)aviasales_dateWithDayMonthString:(NSString *)string;
++ (nullable NSDate *)aviasales_dateWithDayMonthString:(nonnull NSString *)string;
 
 @end

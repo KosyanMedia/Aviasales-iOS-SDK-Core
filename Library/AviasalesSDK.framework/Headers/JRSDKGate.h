@@ -22,11 +22,6 @@
 @property (nonatomic, retain, nonnull) NSNumber *averageRate;
 
 /**
- *  Gate currency code
- */
-@property (nonatomic, retain, nonnull) JRSDKCurrency currencyCode;
-
-/**
  *  Gate identifier
  */
 @property (nonatomic, retain, nonnull) NSString *gateID;
@@ -85,7 +80,7 @@
 /**
  *  Whether the gate's productivity should be increased for tickets with main airlines from this set
  */
-@property (nonatomic, strong, nonnull) NSSet <JRSDKIATA> *raiseProductivityForAirlineIATAs;
+@property (nonatomic, strong, nonnull) NSSet <NSSet <JRSDKIATA> *> *raiseProductivityForAirlineIATAs;
 
 
 @end

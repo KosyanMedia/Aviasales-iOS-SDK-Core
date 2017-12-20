@@ -22,6 +22,15 @@
  *
  *  @return `YES` when the airport is the only airport in the city, `NO` otherwise
  */
-+ (BOOL)isAirportSingleInItsCity:(JRSDKAirport *)airport;
++ (BOOL)isAirportSingleInItsCity:(nonnull JRSDKAirport *)airport;
+
+/**
+ *  Get list of cities for given list of airports
+ *
+ *  @param airports Airports to fill
+ *
+ *  @return list of cities
+ */
++ (nonnull NSArray<JRSDKAirport *> *)citiesWithNamesOf:(nonnull NSArray<JRSDKAirport *> *)airports;
 
 @end

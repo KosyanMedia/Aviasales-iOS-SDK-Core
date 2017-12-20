@@ -12,6 +12,6 @@
 /**
  *  Price value
  */
-@property (nonatomic, assign) NSInteger value; //TODO: change to double or multiply with 100
+@property (nonatomic, assign) float value;
 
 @end

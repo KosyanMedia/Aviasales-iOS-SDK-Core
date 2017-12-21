@@ -10,9 +10,10 @@
 #if !TARGET_OS_WATCH
 #import <AviasalesSDK/JRSDKModelUtils.h>
 #import <AviasalesSDK/JRSDKSearchInfo.h>
+#import <AviasalesSDK/JRSDKFlight.h>
 #else
 #import <AviasalesWatchSDK/JRSDKModelUtils.h>
-#import <AviasalesWatchSDK/JRSDKSearchInfo.h>
+#import <AviasalesWatchSDK/JRSDKFlight.h>
 #endif
 
 
@@ -37,16 +38,16 @@ typedef NS_ENUM(NSUInteger, JRSDKSearchInfoType) {
  *
  *  @return The resulting type
  */
-+ (JRSDKSearchInfoType)searchInfoType:(JRSDKSearchInfo *)searchInfo;
++ (JRSDKSearchInfoType)searchInfoType:(nullable JRSDKSearchInfo *)searchInfo;
 
 /**
  *  Convenient methods to check search info to be of certain type
  */
-+ (BOOL)travelSegmentsSetIsDirectReturnFlight:(NSOrderedSet<JRSDKTravelSegment *> *)travelSegments;
-+ (BOOL)searchInfoIsDirectReturnFlight:(JRSDKSearchInfo *)searchInfo;
-+ (BOOL)isSimpleSearch:(JRSDKSearchInfo *)searchInfo;
-+ (BOOL)searchInfoIsComplex:(JRSDKSearchInfo *)searchInfo;
-+ (BOOL)isSearchInfoComplexOpenJawSearch:(JRSDKSearchInfo *)searchInfo;
++ (BOOL)travelSegmentsSetIsDirectReturnFlight:(nullable NSOrderedSet<JRSDKTravelSegment *> *)travelSegments;
++ (BOOL)searchInfoIsDirectReturnFlight:(nullable JRSDKSearchInfo *)searchInfo;
++ (BOOL)isSimpleSearch:(nullable JRSDKSearchInfo *)searchInfo;
++ (BOOL)searchInfoIsComplex:(nullable JRSDKSearchInfo *)searchInfo;
++ (BOOL)isSearchInfoComplexOpenJawSearch:(nullable JRSDKSearchInfo *)searchInfo;
 
 /**
  *  Calculates total number of passengers
@@ -55,9 +56,11 @@ typedef NS_ENUM(NSUInteger, JRSDKSearchInfoType) {
  *
  *  @return Total number of passengers
  */
-+ (NSInteger)searchInfoNumberOfPassengers:(JRSDKSearchInfo *)searchInfo;
++ (NSInteger)searchInfoNumberOfPassengers:(nullable JRSDKSearchInfo *)searchInfo;
 
-+ (BOOL)searchInfoIsValidForSearch:(JRSDKSearchInfo *)searchInfo;
++ (BOOL)searchInfoIsValidForSearch:(nullable JRSDKSearchInfo *)searchInfo;
+
++ (nonnull NSString *)flightCodeWithOperatingAirline:(nullable NSString *)operatingAirlineIATA flightNumber:(nullable NSString *)number searchInfo:(nullable JRSDKSearchInfo *)searchInfo;
 
 @end
 

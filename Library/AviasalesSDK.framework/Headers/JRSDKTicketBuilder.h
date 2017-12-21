@@ -14,6 +14,7 @@
 @property (strong, nonatomic, nullable) JRSDKSearchResultInfo *searchResultInfo;
 
 - (nonnull instancetype)initWithTicketToUpdate:(nonnull JRSDKTicket *)ticket;
+- (nonnull instancetype)initWithTicketToCopy:(nonnull JRSDKTicket *)ticket;
 
 /**
  * Returns ticket if all properties set up correctly. Nil instead.

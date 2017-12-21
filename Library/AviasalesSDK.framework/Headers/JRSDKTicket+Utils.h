@@ -21,7 +21,7 @@
  *
  *  @return The lowest price
  */
-+ (JRSDKProposal *)ticketMinimalPriceProposal:(JRSDKTicket *)ticket;
++ (nullable JRSDKProposal *)ticketMinimalPriceProposal:(nullable JRSDKTicket *)ticket;
 
 /**
  *  Finds the price that can be purchased in credit in ticket
@@ -30,7 +30,7 @@
  *
  *  @return Price that can be purchased in credit
  */
-+ (JRSDKProposal *)ticketCreditProposal:(JRSDKTicket *)ticket;
++ (nullable JRSDKProposal *)ticketCreditProposal:(nullable JRSDKTicket *)ticket;
 
 /**
  *  Checks whether all segments in ticket are direct flights or not
@@ -39,7 +39,7 @@
  *
  *  @return `YES` if all segments in ticket are direct flights, `NO` otherwise
  */
-+ (BOOL)allSegmentsAreDirectFlights:(JRSDKTicket *)ticket;
++ (BOOL)allSegmentsAreDirectFlights:(nullable JRSDKTicket *)ticket;
 
 /**
  *  Returns ticket with minimal price from tickets set
@@ -48,7 +48,7 @@
  *
  *  @return A ticket with minimal price
  */
-+ (JRSDKTicket *)ticketWithMinPriceFrom:(NSSet<JRSDKTicket *> *)ticketSet;
++ (nullable JRSDKTicket *)ticketWithMinPriceFrom:(nullable NSSet<JRSDKTicket *> *)ticketSet;
 
 /**
  *  Returns ticket with minimal price from tickets set
@@ -57,6 +57,6 @@
  *
  *  @return A ticket with minimal price
  */
-+ (JRSDKTicket *)ticketWithMinPriceFromOrderedSet:(NSOrderedSet<JRSDKTicket *> *)ticketsOrderedSet;
++ (nullable JRSDKTicket *)ticketWithMinPriceFromOrderedSet:(nullable NSOrderedSet<JRSDKTicket *> *)ticketsOrderedSet;
     
 @end

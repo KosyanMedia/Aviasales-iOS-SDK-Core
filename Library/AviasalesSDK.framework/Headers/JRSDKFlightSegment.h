@@ -25,7 +25,7 @@
 /**
  *  Flights in the flight segment
  */
-@property (nonatomic, retain, nonnull) NSOrderedSet <JRSDKFlight *> *flights;
+@property (nonatomic, retain, nonnull, readonly) NSOrderedSet <JRSDKFlight *> *flights;
 
 /**
  *  Total flights duration in this flight segment (minutes)

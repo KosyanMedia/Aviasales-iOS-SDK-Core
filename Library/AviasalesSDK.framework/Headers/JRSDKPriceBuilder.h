@@ -3,7 +3,7 @@
 @interface JRSDKPriceBuilder : NSObject
 
 @property (strong, nonatomic, nullable) JRSDKCurrency currency;
-@property (assign, nonatomic) NSInteger value;
+@property (assign, nonatomic) float value;
 
 - (BOOL)canBuild;
 - (nullable JRSDKPrice *)build;

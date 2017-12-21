@@ -10,6 +10,7 @@
 
 typedef NSString * JRSDKIATA;
 typedef NSString * JRSDKCurrency;
+typedef NSString * JRSDKFlightCode;
 
 /**
  * Time interval in minutes

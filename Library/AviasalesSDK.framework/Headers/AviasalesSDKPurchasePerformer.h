@@ -49,8 +49,9 @@
  *
  *  @param performer  `AviasalesSDKPurchasePerformer` instance that performs the routine
  *  @param URLRequest `NSURLRequest` instance that is generally used to load a page in webview
+ *  @param clickID `NSString` instance that is identifies ongoing purchase
  */
-- (void)purchasePerformer:(AviasalesSDKPurchasePerformer *)performer didFinishWithURLRequest:(NSURLRequest *)URLRequest;
+- (void)purchasePerformer:(AviasalesSDKPurchasePerformer *)performer didFinishWithURLRequest:(NSURLRequest *)URLRequest clickID:(NSString *)clickID;
 
 /**
  *  Method gets called when the `NSURLRequest` did fail to create

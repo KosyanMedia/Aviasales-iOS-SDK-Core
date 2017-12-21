@@ -53,6 +53,11 @@ FOUNDATION_EXPORT NSString *const kAviasalesAirportsStorageNewAirportsParsedNoti
 - (NSArray <JRSDKAirport *> *)findAllAirportsByIATA:(JRSDKIATA)IATA;
 
 /**
+ *  Convenient methods to fetch country by code
+ */
+- (JRSDKCountry *)findCountryByCode:(NSString *)code;
+
+/**
  *  Saves airports list to storage
  *
  *  @param airports `NSArray` with `JRSDKAirport`

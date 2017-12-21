@@ -17,6 +17,6 @@
  *
  *  @return `YES` when the resulting search info is of complex type, `NO` otherwise
  */
-+ (BOOL)isComplexSearchWithTravelSegments:(NSOrderedSet<JRSDKTravelSegment *> *)travelSegments;
++ (BOOL)isComplexSearchWithTravelSegments:(nullable NSOrderedSet<JRSDKTravelSegment *> *)travelSegments;
 
 @end

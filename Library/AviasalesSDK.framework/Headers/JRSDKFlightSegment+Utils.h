@@ -22,7 +22,7 @@
  *
  *  @return `YES` when flight segment is a direct flight segment, `NO` otherwise
  */
-+ (BOOL)isDirectFlightSegment:(JRSDKFlightSegment *)flightSegment;
++ (BOOL)isDirectFlightSegment:(nonnull JRSDKFlightSegment *)flightSegment;
 
 /**
  *  Returns origin IATA for flight segment
@@ -31,7 +31,7 @@
  *
  *  @return Origin IATA
  */
-+ (JRSDKIATA)flightSegmentOriginIATA:(JRSDKFlightSegment *)flightSegment;
++ (nullable JRSDKIATA)flightSegmentOriginIATA:(nonnull JRSDKFlightSegment *)flightSegment;
 
 /**
  *  Returns destination IATA for flight segment
@@ -40,7 +40,7 @@
  *
  *  @return Destination IATA
  */
-+ (JRSDKIATA)flightSegmentDestinationIATA:(JRSDKFlightSegment *)flightSegment;
++ (nullable JRSDKIATA)flightSegmentDestinationIATA:(nonnull JRSDKFlightSegment *)flightSegment;
 
 /**
  *  Returns flight segment stopover count
@@ -49,7 +49,7 @@
  *
  *  @return Flight segment stopover count
  */
-+ (NSInteger)flightSegmentStopoverCount:(JRSDKFlightSegment *)flightSegment;
++ (NSInteger)flightSegmentStopoverCount:(nonnull JRSDKFlightSegment *)flightSegment;
 
 /**
  * Returns departure date of first flight in flight segment
@@ -58,6 +58,6 @@
  *
  * @return Departure date of flight segment
  */
-+ (NSDate *)flightSegmentDepartureDate:(JRSDKFlightSegment *)flightSegment;
++ (nonnull NSDate *)flightSegmentDepartureDate:(nonnull JRSDKFlightSegment *)flightSegment;
 
 @end

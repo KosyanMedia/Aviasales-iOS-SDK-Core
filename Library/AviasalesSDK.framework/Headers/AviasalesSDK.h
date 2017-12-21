@@ -51,6 +51,7 @@ FOUNDATION_EXPORT const unsigned char AviasalesSDKVersionString[];
 #import <AviasalesSDK/JRSDKTravelSegment+Utils.h>
 #import <AviasalesSDK/JRSDKCurrency+Utils.h>
 #import <AviasalesSDK/JRSDKBaggageRule+Utils.h>
+#import <AviasalesSDK/JRSDKFlight+Utils.h>
 #import <AviasalesSDK/AviasalesNumberUtil.h>
 #import <AviasalesSDK/NSDate+AviasalesCoding.h>
 
@@ -80,6 +81,7 @@ FOUNDATION_EXPORT const unsigned char AviasalesSDKVersionString[];
 #import <AviasalesSDK/JRSDKProposalRate.h>
 #import <AviasalesSDK/JRSDKProposalFlightSegmentRate.h>
 #import <AviasalesSDK/JRSDKProposalFlightRate.h>
+#import <AviasalesSDK/JRSDKFlightInfo.h>
 
 /**
  * Model builders headers
@@ -104,7 +106,7 @@ FOUNDATION_EXPORT const unsigned char AviasalesSDKVersionString[];
 #import <AviasalesSDK/JRSDKProposalRateBuilder.h>
 #import <AviasalesSDK/JRSDKProposalFlightSegmentRateBuilder.h>
 #import <AviasalesSDK/JRSDKProposalFlightRateBuilder.h>
-
+#import <AviasalesSDK/JRSDKFlightInfoBuilder.h>
 
 /**
  *  Notification is posted when currency code is being changed
@@ -132,6 +134,15 @@ extern NSString * _Nonnull const kAviasalesCurrencyDidUpdateNotificationName;
  *  @param configuration The configuration object that contains your API token, partner marker and desired locale. See <AviasalesSDK/AviasalesSDKInitialConfiguration.h>
  */
 + (void)setupWithConfiguration:(nonnull AviasalesSDKInitialConfiguration *)configuration;
+
+/**
+ *  Returns SDK was configured
+ *
+ *  @return Bool
+ *
+ *  @warning You may call this method to check whether AviasalesSDK was configured or not
+ */
++ (BOOL)wasConfigured;
 
 /**
  *  Returns SDK singleton instance

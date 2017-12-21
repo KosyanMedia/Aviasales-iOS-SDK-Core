@@ -32,7 +32,7 @@ typedef NS_OPTIONS(NSUInteger, BaggageFilterValues) {
  *
  *  @return Comparison result
  */
-+ (NSComparisonResult)compareFirstProposal:(JRSDKProposal *)firstProposal withSecondOne:(JRSDKProposal *)secondProposal;
++ (NSComparisonResult)compareFirstProposal:(nonnull JRSDKProposal *)firstProposal withSecondOne:(nonnull JRSDKProposal *)secondProposal;
 
 /**
  *  Compares two proposals by price value
@@ -42,7 +42,7 @@ typedef NS_OPTIONS(NSUInteger, BaggageFilterValues) {
  *
  *  @return Comparison result
  */
-+ (NSComparisonResult)compareByPriceValueFirstProposal:(JRSDKProposal *)firstProposal withSecondOne:(JRSDKProposal *)secondProposal;
++ (NSComparisonResult)compareByPriceValueFirstProposal:(nonnull JRSDKProposal *)firstProposal withSecondOne:(nonnull JRSDKProposal *)secondProposal;
 
 /**
  *  Checks all flight segment rates in proposal to include baggage
@@ -53,7 +53,7 @@ typedef NS_OPTIONS(NSUInteger, BaggageFilterValues) {
  *
  *  @return `YES` when proposal rate baggage rules conform to passed BaggageFilterValues, `NO` otherwise
  */
-+ (BOOL)proposal:(JRSDKProposal *)proposal checkBaggageFilters:(BaggageFilterValues)filters forFlightSegmentWithIndex:(NSUInteger)flightSegmentIndex;
++ (BOOL)proposal:(nonnull JRSDKProposal *)proposal checkBaggageFilters:(BaggageFilterValues)filters forFlightSegmentWithIndex:(NSUInteger)flightSegmentIndex;
 
 @end
 

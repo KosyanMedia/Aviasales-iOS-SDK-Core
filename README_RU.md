@@ -11,7 +11,7 @@
 Самый простой способ добавления AviasalesSDK в проект - с использованием [CocoaPods](http://cocoapods.org).:
 
 ```ruby
-pod 'AviasalesSDK', '~> 3.0.3'
+pod 'AviasalesSDK', '~> 3.0.4'
 ```
 
 Мы рекомендуем импортировать ```AviasalesSDK.h``` в каждом файле, где вы пользуетесь объектами или протоколами из SDK.

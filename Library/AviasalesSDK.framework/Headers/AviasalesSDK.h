@@ -38,6 +38,13 @@ FOUNDATION_EXPORT const unsigned char AviasalesSDKVersionString[];
 #import <AviasalesSDK/JRSDKSearchPerformer.h>
 
 /**
+ * Price calendar headers
+ */
+
+#import <AviasalesSDK/JRSDKPriceCalendarLoader.h>
+#import <AviasalesSDK/JRSDKPriceCalendarDeparture.h>
+
+/**
  *  Utils headers
  */
 #import <AviasalesSDK/JRSDKModelUtils.h>

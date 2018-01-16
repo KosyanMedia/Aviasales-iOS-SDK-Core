@@ -14,10 +14,10 @@
 		070625D91CC4F03B00974AB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 070625D81CC4F03B00974AB4 /* Assets.xcassets */; };
 		070625DC1CC4F03B00974AB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070625DA1CC4F03B00974AB4 /* LaunchScreen.storyboard */; };
 		070625E71CC4F03B00974AB4 /* ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070625E61CC4F03B00974AB4 /* ProjectTests.m */; };
-		322E054420091881008F2013 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 322E052720091880008F2013 /* airports.json */; };
-		322E054520091881008F2013 /* all_currencies_rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 322E052E20091880008F2013 /* all_currencies_rates.json */; };
-		322E054620091881008F2013 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 322E054220091880008F2013 /* Info.plist */; };
-		322E054720091881008F2013 /* AviasalesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322E054320091880008F2013 /* AviasalesSDK.framework */; };
+		3265E46B200E607F00C263D4 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 3265E44E200E607F00C263D4 /* airports.json */; };
+		3265E46C200E607F00C263D4 /* all_currencies_rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 3265E455200E607F00C263D4 /* all_currencies_rates.json */; };
+		3265E46D200E607F00C263D4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3265E469200E607F00C263D4 /* Info.plist */; };
+		3265E46E200E607F00C263D4 /* AviasalesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3265E46A200E607F00C263D4 /* AviasalesSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,34 +57,34 @@
 		070625E21CC4F03B00974AB4 /* ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		070625E61CC4F03B00974AB4 /* ProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectTests.m; sourceTree = "<group>"; };
 		070625E81CC4F03B00974AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		322E052820091880008F2013 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/airports.json; sourceTree = "<group>"; };
-		322E052920091880008F2013 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ar; path = ar.lproj/airports.json; sourceTree = "<group>"; };
-		322E052A20091880008F2013 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = el; path = el.lproj/airports.json; sourceTree = "<group>"; };
-		322E052B20091880008F2013 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hans"; path = "zh-Hans.lproj/airports.json"; sourceTree = "<group>"; };
-		322E052C20091880008F2013 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ja; path = ja.lproj/airports.json; sourceTree = "<group>"; };
-		322E052D20091880008F2013 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/airports.json; sourceTree = "<group>"; };
-		322E052E20091880008F2013 /* all_currencies_rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_currencies_rates.json; sourceTree = "<group>"; };
-		322E052F20091880008F2013 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nb; path = nb.lproj/airports.json; sourceTree = "<group>"; };
-		322E053020091880008F2013 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = es; path = es.lproj/airports.json; sourceTree = "<group>"; };
-		322E053120091880008F2013 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = da; path = da.lproj/airports.json; sourceTree = "<group>"; };
-		322E053220091880008F2013 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = it; path = it.lproj/airports.json; sourceTree = "<group>"; };
-		322E053320091880008F2013 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ms; path = ms.lproj/airports.json; sourceTree = "<group>"; };
-		322E053420091880008F2013 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = sv; path = sv.lproj/airports.json; sourceTree = "<group>"; };
-		322E053520091880008F2013 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ko; path = ko.lproj/airports.json; sourceTree = "<group>"; };
-		322E053620091880008F2013 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hant"; path = "zh-Hant.lproj/airports.json"; sourceTree = "<group>"; };
-		322E053720091880008F2013 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = tr; path = tr.lproj/airports.json; sourceTree = "<group>"; };
-		322E053820091880008F2013 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pl; path = pl.lproj/airports.json; sourceTree = "<group>"; };
-		322E053920091880008F2013 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = vi; path = vi.lproj/airports.json; sourceTree = "<group>"; };
-		322E053A20091880008F2013 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ru; path = ru.lproj/airports.json; sourceTree = "<group>"; };
-		322E053B20091880008F2013 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fr; path = fr.lproj/airports.json; sourceTree = "<group>"; };
-		322E053C20091880008F2013 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fi; path = fi.lproj/airports.json; sourceTree = "<group>"; };
-		322E053D20091880008F2013 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = id; path = id.lproj/airports.json; sourceTree = "<group>"; };
-		322E053E20091880008F2013 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nl; path = nl.lproj/airports.json; sourceTree = "<group>"; };
-		322E053F20091880008F2013 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = th; path = th.lproj/airports.json; sourceTree = "<group>"; };
-		322E054020091880008F2013 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/airports.json; sourceTree = "<group>"; };
-		322E054120091880008F2013 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-PT"; path = "pt-PT.lproj/airports.json"; sourceTree = "<group>"; };
-		322E054220091880008F2013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Info.plist; sourceTree = "<group>"; };
-		322E054320091880008F2013 /* AviasalesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AviasalesSDK.framework; sourceTree = "<group>"; };
+		3265E44F200E607F00C263D4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/airports.json; sourceTree = "<group>"; };
+		3265E450200E607F00C263D4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ar; path = ar.lproj/airports.json; sourceTree = "<group>"; };
+		3265E451200E607F00C263D4 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = el; path = el.lproj/airports.json; sourceTree = "<group>"; };
+		3265E452200E607F00C263D4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hans"; path = "zh-Hans.lproj/airports.json"; sourceTree = "<group>"; };
+		3265E453200E607F00C263D4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ja; path = ja.lproj/airports.json; sourceTree = "<group>"; };
+		3265E454200E607F00C263D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/airports.json; sourceTree = "<group>"; };
+		3265E455200E607F00C263D4 /* all_currencies_rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_currencies_rates.json; sourceTree = "<group>"; };
+		3265E456200E607F00C263D4 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nb; path = nb.lproj/airports.json; sourceTree = "<group>"; };
+		3265E457200E607F00C263D4 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = es; path = es.lproj/airports.json; sourceTree = "<group>"; };
+		3265E458200E607F00C263D4 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = da; path = da.lproj/airports.json; sourceTree = "<group>"; };
+		3265E459200E607F00C263D4 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = it; path = it.lproj/airports.json; sourceTree = "<group>"; };
+		3265E45A200E607F00C263D4 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ms; path = ms.lproj/airports.json; sourceTree = "<group>"; };
+		3265E45B200E607F00C263D4 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = sv; path = sv.lproj/airports.json; sourceTree = "<group>"; };
+		3265E45C200E607F00C263D4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ko; path = ko.lproj/airports.json; sourceTree = "<group>"; };
+		3265E45D200E607F00C263D4 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "zh-Hant"; path = "zh-Hant.lproj/airports.json"; sourceTree = "<group>"; };
+		3265E45E200E607F00C263D4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = tr; path = tr.lproj/airports.json; sourceTree = "<group>"; };
+		3265E45F200E607F00C263D4 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pl; path = pl.lproj/airports.json; sourceTree = "<group>"; };
+		3265E460200E607F00C263D4 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = vi; path = vi.lproj/airports.json; sourceTree = "<group>"; };
+		3265E461200E607F00C263D4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ru; path = ru.lproj/airports.json; sourceTree = "<group>"; };
+		3265E462200E607F00C263D4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fr; path = fr.lproj/airports.json; sourceTree = "<group>"; };
+		3265E463200E607F00C263D4 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fi; path = fi.lproj/airports.json; sourceTree = "<group>"; };
+		3265E464200E607F00C263D4 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = id; path = id.lproj/airports.json; sourceTree = "<group>"; };
+		3265E465200E607F00C263D4 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = nl; path = nl.lproj/airports.json; sourceTree = "<group>"; };
+		3265E466200E607F00C263D4 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = th; path = th.lproj/airports.json; sourceTree = "<group>"; };
+		3265E467200E607F00C263D4 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/airports.json; sourceTree = "<group>"; };
+		3265E468200E607F00C263D4 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-PT"; path = "pt-PT.lproj/airports.json"; sourceTree = "<group>"; };
+		3265E469200E607F00C263D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Info.plist; sourceTree = "<group>"; };
+		3265E46A200E607F00C263D4 /* AviasalesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AviasalesSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				322E054720091881008F2013 /* AviasalesSDK.framework in Frameworks */,
+				3265E46E200E607F00C263D4 /* AviasalesSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 		070625C01CC4F03B00974AB4 = {
 			isa = PBXGroup;
 			children = (
-				076FAB4B1D37C9830044FEF2 /* Library */,
+				3265E44C200E607F00C263D4 /* Library */,
 				070625CB1CC4F03B00974AB4 /* Project */,
 				070625E51CC4F03B00974AB4 /* ProjectTests */,
 				070625CA1CC4F03B00974AB4 /* Products */,
@@ -158,21 +158,21 @@
 			path = ProjectTests;
 			sourceTree = "<group>";
 		};
-		076FAB4B1D37C9830044FEF2 /* Library */ = {
+		3265E44C200E607F00C263D4 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				322E054320091880008F2013 /* AviasalesSDK.framework */,
-				322E052620091880008F2013 /* Resources */,
+				3265E44D200E607F00C263D4 /* Resources */,
+				3265E46A200E607F00C263D4 /* AviasalesSDK.framework */,
 			);
 			path = Library;
 			sourceTree = "<group>";
 		};
-		322E052620091880008F2013 /* Resources */ = {
+		3265E44D200E607F00C263D4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				322E052720091880008F2013 /* airports.json */,
-				322E052E20091880008F2013 /* all_currencies_rates.json */,
-				322E054220091880008F2013 /* Info.plist */,
+				3265E44E200E607F00C263D4 /* airports.json */,
+				3265E455200E607F00C263D4 /* all_currencies_rates.json */,
+				3265E469200E607F00C263D4 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -284,9 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				070625DC1CC4F03B00974AB4 /* LaunchScreen.storyboard in Resources */,
-				322E054520091881008F2013 /* all_currencies_rates.json in Resources */,
-				322E054620091881008F2013 /* Info.plist in Resources */,
-				322E054420091881008F2013 /* airports.json in Resources */,
+				3265E46C200E607F00C263D4 /* all_currencies_rates.json in Resources */,
+				3265E46D200E607F00C263D4 /* Info.plist in Resources */,
+				3265E46B200E607F00C263D4 /* airports.json in Resources */,
 				070625D91CC4F03B00974AB4 /* Assets.xcassets in Resources */,
 				070625D71CC4F03B00974AB4 /* Main.storyboard in Resources */,
 			);
@@ -347,34 +347,34 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		322E052720091880008F2013 /* airports.json */ = {
+		3265E44E200E607F00C263D4 /* airports.json */ = {
 			isa = PBXVariantGroup;
 			children = (
-				322E052820091880008F2013 /* de */,
-				322E052920091880008F2013 /* ar */,
-				322E052A20091880008F2013 /* el */,
-				322E052B20091880008F2013 /* zh-Hans */,
-				322E052C20091880008F2013 /* ja */,
-				322E052D20091880008F2013 /* en */,
-				322E052F20091880008F2013 /* nb */,
-				322E053020091880008F2013 /* es */,
-				322E053120091880008F2013 /* da */,
-				322E053220091880008F2013 /* it */,
-				322E053320091880008F2013 /* ms */,
-				322E053420091880008F2013 /* sv */,
-				322E053520091880008F2013 /* ko */,
-				322E053620091880008F2013 /* zh-Hant */,
-				322E053720091880008F2013 /* tr */,
-				322E053820091880008F2013 /* pl */,
-				322E053920091880008F2013 /* vi */,
-				322E053A20091880008F2013 /* ru */,
-				322E053B20091880008F2013 /* fr */,
-				322E053C20091880008F2013 /* fi */,
-				322E053D20091880008F2013 /* id */,
-				322E053E20091880008F2013 /* nl */,
-				322E053F20091880008F2013 /* th */,
-				322E054020091880008F2013 /* pt */,
-				322E054120091880008F2013 /* pt-PT */,
+				3265E44F200E607F00C263D4 /* de */,
+				3265E450200E607F00C263D4 /* ar */,
+				3265E451200E607F00C263D4 /* el */,
+				3265E452200E607F00C263D4 /* zh-Hans */,
+				3265E453200E607F00C263D4 /* ja */,
+				3265E454200E607F00C263D4 /* en */,
+				3265E456200E607F00C263D4 /* nb */,
+				3265E457200E607F00C263D4 /* es */,
+				3265E458200E607F00C263D4 /* da */,
+				3265E459200E607F00C263D4 /* it */,
+				3265E45A200E607F00C263D4 /* ms */,
+				3265E45B200E607F00C263D4 /* sv */,
+				3265E45C200E607F00C263D4 /* ko */,
+				3265E45D200E607F00C263D4 /* zh-Hant */,
+				3265E45E200E607F00C263D4 /* tr */,
+				3265E45F200E607F00C263D4 /* pl */,
+				3265E460200E607F00C263D4 /* vi */,
+				3265E461200E607F00C263D4 /* ru */,
+				3265E462200E607F00C263D4 /* fr */,
+				3265E463200E607F00C263D4 /* fi */,
+				3265E464200E607F00C263D4 /* id */,
+				3265E465200E607F00C263D4 /* nl */,
+				3265E466200E607F00C263D4 /* th */,
+				3265E467200E607F00C263D4 /* pt */,
+				3265E468200E607F00C263D4 /* pt-PT */,
 			);
 			name = airports.json;
 			sourceTree = "<group>";

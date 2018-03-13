@@ -17,7 +17,7 @@
 		3265E46B200E607F00C263D4 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 3265E44E200E607F00C263D4 /* airports.json */; };
 		3265E46C200E607F00C263D4 /* all_currencies_rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 3265E455200E607F00C263D4 /* all_currencies_rates.json */; };
 		3265E46D200E607F00C263D4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3265E469200E607F00C263D4 /* Info.plist */; };
-		3265E46E200E607F00C263D4 /* AviasalesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3265E46A200E607F00C263D4 /* AviasalesSDK.framework */; };
+		3276466E2057F6A800462B5A /* AviasalesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3276466D2057F6A800462B5A /* AviasalesSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +84,7 @@
 		3265E467200E607F00C263D4 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/airports.json; sourceTree = "<group>"; };
 		3265E468200E607F00C263D4 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-PT"; path = "pt-PT.lproj/airports.json"; sourceTree = "<group>"; };
 		3265E469200E607F00C263D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Info.plist; sourceTree = "<group>"; };
-		3265E46A200E607F00C263D4 /* AviasalesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AviasalesSDK.framework; sourceTree = "<group>"; };
+		3276466D2057F6A800462B5A /* AviasalesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AviasalesSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3265E46E200E607F00C263D4 /* AviasalesSDK.framework in Frameworks */,
+				3276466E2057F6A800462B5A /* AviasalesSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,8 +161,8 @@
 		3265E44C200E607F00C263D4 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				3276466D2057F6A800462B5A /* AviasalesSDK.framework */,
 				3265E44D200E607F00C263D4 /* Resources */,
-				3265E46A200E607F00C263D4 /* AviasalesSDK.framework */,
 			);
 			path = Library;
 			sourceTree = "<group>";

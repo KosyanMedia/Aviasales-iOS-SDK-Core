@@ -55,6 +55,15 @@ typedef NS_OPTIONS(NSUInteger, BaggageFilterValues) {
  */
 + (BOOL)proposal:(nonnull JRSDKProposal *)proposal checkBaggageFilters:(BaggageFilterValues)filters forFlightSegmentWithIndex:(NSUInteger)flightSegmentIndex;
 
+/**
+ *  Checks all flight segment rates in proposal to include baggage
+ *
+ *  @param proposal Proposal to check baggage for
+ *
+ *  @return `YES` when all proposal rate baggage rules include baggage
+ */
++ (BOOL)proposalIncludesBaggage:(nonnull JRSDKProposal *)proposal;
+
 @end
 
 @interface JRSDKProposal (Utils)

@@ -1,3 +1,3 @@
 language: objective-c
-osx_image: xcode9.2
+osx_image: xcode9.3
 script: xcodebuild clean build test -project Project.xcodeproj -scheme Project -destination "platform=iOS Simulator,name=iPhone 7,OS=latest" CODE_SIGNING_REQUIRED=NO

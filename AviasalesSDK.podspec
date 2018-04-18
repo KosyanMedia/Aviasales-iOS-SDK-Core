@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 	s.name         = "AviasalesSDK"
-	s.version      = "3.0.4"
+	s.version      = "3.1.0"
 	s.summary      = "Integrate flight search and booking framework in your apps."
 	s.description  = <<-DESC
 Aviasales iOS SDK is a framework integrating flight search engine into your app. When your user books a flight, you get paid. Framework is based on leading airline tickets search engines Aviasales.ru and Jetradar.com

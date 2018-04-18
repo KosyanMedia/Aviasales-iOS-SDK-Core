@@ -70,4 +70,9 @@
  */
 @property (nonatomic, strong, nonnull) JRSDKSearchResultInfo *searchResultInfo;
 
+/**
+ *  Ticket weight based on number of sales
+ */
+@property (nonatomic, strong, nonnull) NSNumber *weight;
+
 @end

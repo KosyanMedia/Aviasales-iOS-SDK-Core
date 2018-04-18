@@ -31,7 +31,12 @@ typedef NS_ENUM(short, JRSDKBaggageRuleType) {
     /**
      *  X kilograms of baggage included
      */
-    JRSDKBaggageRuleTypeXKilos
+    JRSDKBaggageRuleTypeXKilos,
+
+    /**
+     *  X packages included
+     */
+    JRSDKBaggageRuleTypeXPackages
 };
 
 

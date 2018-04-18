@@ -28,7 +28,6 @@ extern NSInteger const kAviasalesSDKAdsManagerErrorCodeEmplacementIsNotEnabled;
  *  @param searchInfo Search info object for the current search
  *  @param completion Callback that will receive an `UIView` subclass to place on screen or an `NSError` in case advert did fail to load
  */
-- (void)loadAdsViewForWaitingScreenWithSearchInfo:(nonnull JRSDKSearchInfo *)searchInfo completion:(nonnull AviasalesSDKAdsManagerCompletion)completion;
 - (void)loadAdsViewForSearchResultsWithSearchInfo:(nonnull JRSDKSearchInfo *)searchInfo completion:(nonnull AviasalesSDKAdsManagerCompletion)completion;
 
 @end

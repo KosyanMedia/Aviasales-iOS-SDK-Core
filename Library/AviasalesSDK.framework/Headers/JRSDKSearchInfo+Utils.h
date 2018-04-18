@@ -50,6 +50,11 @@ typedef NS_ENUM(NSUInteger, JRSDKSearchInfoType) {
 + (BOOL)isSearchInfoComplexOpenJawSearch:(nullable JRSDKSearchInfo *)searchInfo;
 
 /**
+ *  Return date for search info of direct-return type
+ */
++ (nullable NSDate *)returnDateForSimpleSearchInSearchInfo:(nonnull JRSDKSearchInfo *)searchInfo;
+
+/**
  *  Calculates total number of passengers
  *
  *  @param searchInfo Search info to calculate number of passengers for

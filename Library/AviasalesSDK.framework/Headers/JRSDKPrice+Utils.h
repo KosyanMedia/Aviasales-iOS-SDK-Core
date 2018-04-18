@@ -17,7 +17,10 @@
  *  Convenient methods to get the price value in different currencies
  */
 - (nonnull NSNumber *)priceInUserCurrency;
+- (nonnull NSNumber *)priceByConfigurationInRUBOrUSD;
+- (nonnull NSNumber *)priceInRUB;
 - (nonnull NSNumber *)priceInUSD;
 - (nonnull NSNumber *)priceInCurrency:(nonnull JRSDKCurrency)currency;
+- (NSComparisonResult)compareWith:(nonnull JRSDKPrice *)anotherPrice;
 
 @end

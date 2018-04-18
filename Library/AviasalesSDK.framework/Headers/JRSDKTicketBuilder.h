@@ -12,6 +12,7 @@
 @property (assign, nonatomic) BOOL isFromTrustedGate;
 @property (assign, nonatomic) BOOL isCharter;
 @property (strong, nonatomic, nullable) JRSDKSearchResultInfo *searchResultInfo;
+@property (strong, nonatomic, nullable) NSNumber *weight;
 
 - (nonnull instancetype)initWithTicketToUpdate:(nonnull JRSDKTicket *)ticket;
 - (nonnull instancetype)initWithTicketToCopy:(nonnull JRSDKTicket *)ticket;

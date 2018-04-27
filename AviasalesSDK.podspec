@@ -11,7 +11,7 @@ Aviasales iOS SDK is a framework integrating flight search engine into your app.
 	s.license      = { :type => "MIT", :file => "LICENSE" }
 	s.author       = { "Aviasales iOS Team" => "support@aviasales.ru" }
 	s.platform     = :ios, "8.0"
-	s.source       = { :git => "https://github.com/KosyanMedia/Aviasales-iOS-SDK-Core.git", :tag => "3.0.4" }
+	s.source       = { :git => "https://github.com/KosyanMedia/Aviasales-iOS-SDK-Core.git", :tag => "3.1.1" }
 	s.ios.resource_bundle = {
 		"AviasalesSDKResources" => "Library/Resources/*"
 	}

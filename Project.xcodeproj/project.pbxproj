@@ -16,7 +16,6 @@
 		070625E71CC4F03B00974AB4 /* ProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070625E61CC4F03B00974AB4 /* ProjectTests.m */; };
 		322648F3208755130083BA44 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 322648D6208755130083BA44 /* airports.json */; };
 		322648F4208755130083BA44 /* all_currencies_rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 322648DD208755130083BA44 /* all_currencies_rates.json */; };
-		322648F5208755130083BA44 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 322648F1208755130083BA44 /* Info.plist */; };
 		322648F6208755130083BA44 /* AviasalesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 322648F2208755130083BA44 /* AviasalesSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +82,6 @@
 		322648EE208755130083BA44 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = th; path = th.lproj/airports.json; sourceTree = "<group>"; };
 		322648EF208755130083BA44 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pt; path = pt.lproj/airports.json; sourceTree = "<group>"; };
 		322648F0208755130083BA44 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "pt-PT"; path = "pt-PT.lproj/airports.json"; sourceTree = "<group>"; };
-		322648F1208755130083BA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Info.plist; sourceTree = "<group>"; };
 		322648F2208755130083BA44 /* AviasalesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AviasalesSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,7 +170,6 @@
 			children = (
 				322648D6208755130083BA44 /* airports.json */,
 				322648DD208755130083BA44 /* all_currencies_rates.json */,
-				322648F1208755130083BA44 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -285,7 +282,6 @@
 			files = (
 				070625DC1CC4F03B00974AB4 /* LaunchScreen.storyboard in Resources */,
 				322648F4208755130083BA44 /* all_currencies_rates.json in Resources */,
-				322648F5208755130083BA44 /* Info.plist in Resources */,
 				322648F3208755130083BA44 /* airports.json in Resources */,
 				070625D91CC4F03B00974AB4 /* Assets.xcassets in Resources */,
 				070625D71CC4F03B00974AB4 /* Main.storyboard in Resources */,

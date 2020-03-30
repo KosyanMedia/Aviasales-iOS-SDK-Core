@@ -82,7 +82,7 @@ searchPerformer.delegate = self;
 ```
 This delegate requires to implement two methods:
 
-First one is called when the search is finished and results are ready to be displayed. After its call, you can release ```SearchPerformer``` because it is not recyclable.:
+First one is called when the search is finished and results are ready to be displayed. After its call, you can release ```SearchPerformer``` because it is not reusable.:
 
 ```objc
 - (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishSearch:(JRSDKSearchInfo *)searchInfo withResult:(JRSDKSearchResult *)result andMetropolitanResult:(JRSDKSearchResult *)metropolitanResult;

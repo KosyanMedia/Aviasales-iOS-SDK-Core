@@ -17,5 +17,6 @@ Aviasales iOS SDK is a framework integrating flight search engine into your app.
 	}
 	s.exclude_files = "Classes/Exclude"
 	s.ios.vendored_frameworks = "Library/AviasalesSDK.framework"
+	s.ios.frameworks = "SystemConfiguration", "CoreTelephony", "WebKit", "CoreLocation"
 
 end

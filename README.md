@@ -11,7 +11,7 @@ As an example, you are welcome to use our Template Project from [Aviasales-iOS-S
 The easiest way is to use [CocoaPods](http://cocoapods.org). It takes care of all required frameworks and third party dependencies:
 
 ```ruby
-pod 'AviasalesSDK', '~> 3.1.2'
+pod 'AviasalesSDK', '~> 4.0.0'
 ```
 
 We recommend to import ```AviasalesSDK.h``` in each file where you use objects or protocols from SDK.
@@ -80,21 +80,17 @@ To retrieve live and final search results set delegate (```JRSDKSearchPerformerD
 ```objc
 searchPerformer.delegate = self;
 ```
-This delegate requires to implement three methods:
-First one is called when results are ready to be displayed (SDK continues to wait for more results after this call and in some **very rare** cases it can get cheaper tickets for this request):
+This delegate requires to implement two methods:
+
+First one is called when the search is finished and results are ready to be displayed. After its call, you can release ```SearchPerformer``` because it is not reusable.:
 
 ```objc
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishRegularSearch:(JRSDKSearchInfo *)searchInfo withResult:(JRSDKSearchResult *)result andMetropolitanResult:(JRSDKSearchResult *)metropolitanResult;
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishSearch:(JRSDKSearchInfo *)searchInfo withResult:(JRSDKSearchResult *)result andMetropolitanResult:(JRSDKSearchResult *)metropolitanResult;
 ```
 Second needed to receive error if it occures during the search
 
 ```objc
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFailSearchWithError:(NSError *)error connection:(JRServerAPIConnection *)connection;
-```
-And the third one needed to understand when the process is finished. After its call, you can release search performer because it is not recyclable.
-
-```objc
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinalizeSearchWithInfo:(id<JRSDKSearchInfo>)searchInfo error:(NSError *)error;
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFailSearchWithError:(NSError *)error;
 ```
 
 Optional method is called when a new chunk of tickets is received from server:
@@ -106,8 +102,7 @@ Optional method is called when a new chunk of tickets is received from server:
 Start search performing:
 
 ```objc
-[searchPerformer performSearchWithSearchInfo:searchInfo
-                             includeResultsInEnglish:YES];
+[searchPerformer performSearchWithSearchInfo:searchInfo];
 ```
 
 #### Parsing search result
@@ -129,30 +124,10 @@ Generate a link for the purchase:
 ```
 Open link received by delegate in browser to provide user purchase form.
 
-### 📺 Advertisement
-Aviasales SDK allows you to generate additional revenue by displaying advertisements to your users.
-Use ```AviasalesSDKAdsManager``` object received like:
-
-```objc
-[AviasalesSDK sharedInstance].adsManager
-```
-to load information for the waiting screen 
-
-```objc 
-- (void)loadAdsViewForWaitingScreenWithSearchInfo:(id <JRSDKSearchInfo>)searchInfo completion:(AviasalesSDKAdsManagerCompletion)completion;
-```
-or for the search results list with your search info.
-
-```objc
-- (void)loadAdsViewForSearchResultsWithSearchInfo:(id <JRSDKSearchInfo>)searchInfo completion:(AviasalesSDKAdsManagerCompletion)completion;
-```
-After appropriate method call you will receive ```AviasalesSDKAdsView``` with ads.
-
 ## ⚒ Other Utils by SDK
 Name | How to retrieve object | Description
 -----|-----------------------|------------
 Airports storage|```[AviasalesSDK sharedInstance].airportsStorage```|Finds airport by IATA, provides a list of airports
 ```AviasalesAirportsSearchPerformer```| ```[[AviasalesAirportsSearchPerformer alloc] init]```|Finds airports by string
 ```AviasalesNearestAirportsManager```|```[AviasalesSDK sharedInstance].nearestAirportsManager```|Finds nearest airports to the current user.
-```AviasalesSDKAdsManager```|```[AviasalesSDK sharedInstance].adsManager```| Loads and displays advertisement according to search parameters
 ```JRSDKModelUtils```| ```[JRSDKModelUtils <method name here>]```|Util methods that help you to work with SDK objects

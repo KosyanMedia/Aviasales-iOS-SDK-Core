@@ -11,7 +11,7 @@
 Самый простой способ добавления AviasalesSDK в проект - с использованием [CocoaPods](http://cocoapods.org).:
 
 ```ruby
-pod 'AviasalesSDK', '~> 3.1.2'
+pod 'AviasalesSDK', '~> 4.0.0'
 ```
 
 Мы рекомендуем импортировать ```AviasalesSDK.h``` в каждом файле, где вы пользуетесь объектами или протоколами из SDK.
@@ -80,22 +80,17 @@ JRSDKSearchPerformer *searchPerformer = [[AviasalesSDK sharedInstance] createSea
 ```objc
 searchPerformer.delegate = self;
 ```
-Этот объект должен реализовать три метода:
+Этот объект должен реализовать два метода:
 
-Первый метод вызовется, когда основные результаты поиска будут готовы для отображения (после этого вызова SDK будет продолжать ждать от сервера данные, и, **в очень редком случае**, может получить дополнительные более дешёвые билеты):
+Первый метод вызовется, когда поиск завершится. После вызова этого метода, вы можете удалить ```SearchPerformer``` из памяти (переиспользовать его не стоит, для следующего поиска создайте новый): 
 
 ```objc
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishRegularSearch:(JRSDKSearchInfo *)searchInfo withResult:(JRSDKSearchResult *)result andMetropolitanResult:(JRSDKSearchResult *)metropolitanResult;
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinishSearch:(JRSDKSearchInfo *)searchInfo withResult:(JRSDKSearchResult *)result andMetropolitanResult:(JRSDKSearchResult *)metropolitanResult;
 ```
 Второй метод, чтобы получить ошибку, если она вдруг возникнет в процессе поиска (например, может отключиться интернет):
 
 ```objc
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFailSearchWithError:(NSError *)error connection:(JRServerAPIConnection *)connection;
-```
-И третий метод нужен, чтобы понять, когда поиск завершится и больше не будет новых результатов. После вызова этого метода, вы можете удалить ```SearchPerformer``` из памяти (переиспользовать его не стоит, для следующего поиска создайте новый):
-
-```objc
-- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFinalizeSearchWithInfo:(id<JRSDKSearchInfo>)searchInfo error:(NSError *)error;
+- (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFailSearchWithError:(NSError *)error;
 ```
 
 Опциональный метод, который вызывается, когда появляется информация о новой пачке билетов (но поиск ещё не завершён):
@@ -104,11 +99,10 @@ searchPerformer.delegate = self;
 - (void)searchPerformer:(JRSDKSearchPerformer *)searchPerformer didFindSomeTickets:(JRSDKSearchResultsChunk *)newTickets inSearchInfo:(JRSDKSearchInfo *)searchInfo temporaryResult:(JRSDKSearchResult *)temporaryResult temporaryMetropolitanResult:(JRSDKSearchResult *)temporaryMetropolitanResult;
 ```
 
-Теперь, когда все нужные методы у нас есть, запускаем поиск (сразу укажите, включать нам результаты агенств на английском языке в выдачу или нет):
+Теперь, когда все нужные методы у нас есть, запускаем поиск:
 
 ```objc
-[searchPerformer performSearchWithSearchInfo:searchInfo
-                             includeResultsInEnglish:YES];
+[searchPerformer performSearchWithSearchInfo:searchInfo];
 ```
 
 #### Получение результатов поиска
@@ -127,30 +121,10 @@ searchPerformer.delegate = self;
 ```
 Вам вернут ссылку, которую надо открыть в браузере, чтобы пользователь заполнил данные о себе и купил билет.
 
-### 📺 Реклама
-Aviasales SDK дает вам дополнительную возможность зарабатывать деньги, отображая высококачественную контекстную рекламу вашим пользователям.
-Используйте объект ```AviasalesSDKAdsManager``` вот так:
-
-```objc
-[AviasalesSDK sharedInstance].adsManager
-```
-чтобы загрузить контекстную рекламу на момент ожидания завершения поиска:
-
-```objc 
-- (void)loadAdsViewForWaitingScreenWithSearchInfo:(id <JRSDKSearchInfo>)searchInfo completion:(AviasalesSDKAdsManagerCompletion)completion;
-```
-или для отображения в результатах поиска:
-
-```objc
-- (void)loadAdsViewForSearchResultsWithSearchInfo:(id <JRSDKSearchInfo>)searchInfo completion:(AviasalesSDKAdsManagerCompletion)completion;
-```
-После вызова соответствующего метода, вам вернется объект ```AviasalesSDKAdsView``` с рекламой. Отобразите его пользователю.
-
 ## ⚒ Дополнительные утилиты, поставляемые с SDK
 Name | How to retrieve object | Description
 -----|-----------------------|------------
 Airports storage|```[AviasalesSDK sharedInstance].airportsStorage```|Поиск аэропортов по IATA коду, или получение списка всех аэропортов
 ```AviasalesAirportsSearchPerformer```| ```[[AviasalesAirportsSearchPerformer alloc] init]```|Поиск аэропортов по строке
 ```AviasalesNearestAirportsManager```|```[AviasalesSDK sharedInstance].nearestAirportsManager```|Поиск аэропортов рядом с пользователем
-```AviasalesSDKAdsManager```|```[AviasalesSDK sharedInstance].adsManager```| Загрузка и отображение контекстной рекламы Aviasales с учетом параметров поиска
 ```JRSDKModelUtils```| ```[JRSDKModelUtils <method name here>]```|Различные удобные методы, которые помогут вам при работе с объектами SDK
